@@ -5,7 +5,7 @@ const source=JSON.parse(readFileSync('web/library.json','utf8'));
 assert.equal(source.items.length,1074);assert.equal(source.items.flatMap(r=>r.media).length,1211);
 assert(source.items.every(r=>r.snapshots.length===0&&!('edit' in r)&&r.media.every(m=>m.media_url.startsWith('https://lightroom.adobe.com/v2c/spaces/'))));
 const storage=new Map(),blobs=new Map();let counter=0;
-const context=vm.createContext({window:{},TextEncoder,Blob,Date,JSON,Error,Uint8Array,DataView,setTimeout:()=>{},fetch:async()=>({ok:true,json:async()=>source}),localStorage:{getItem:k=>storage.get(k),setItem:(k,v)=>storage.set(k,v)},URL:{createObjectURL:b=>{const url='blob:fixture-'+counter++;blobs.set(url,b);return url;},revokeObjectURL:()=>{}}});
+const context=vm.createContext({window:{},TextEncoder,Blob,Date,JSON,Error,Uint8Array,DataView,setTimeout:()=>{},fetch:async()=>({ok:true,json:async()=>source}),localStorage:{getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,v)},URL:{createObjectURL:b=>{const url='blob:fixture-'+counter++;blobs.set(url,b);return url;},revokeObjectURL:()=>{}}});
 vm.runInContext(readFileSync('web/hosted.js','utf8'),context);const api=context.window.mdcHostedAPI;
 const id=source.items.find(r=>r.media.length===5).id;
 await api('/api/item',{id,revision:0,patch:{title:'Validation fixture',drafts:{LinkedIn:'Reviewed caption'}}});
