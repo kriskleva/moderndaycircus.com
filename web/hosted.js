@@ -3,7 +3,7 @@
 const storageKey='mdc-publishing-workspace-v1';
 const categories=['Art and collaborations','Lifestyle and products','API and app work'];
 let publicLibraryPromise;
-function browserState(){try{return JSON.parse(localStorage.getItem(storageKey))||{revision:0,items:{}};}catch(e){throw new Error('Browser storage is unavailable. Enable local storage to save drafts.');}}
+function browserState(){try{const s=JSON.parse(localStorage.getItem(storageKey))||{revision:0,items:{}};s.bundles=s.bundles||{};return s;}catch(e){throw new Error('Browser storage is unavailable. Enable local storage to save drafts.');}}
 const defaultEdit=()=>({title:'',favorite:false,status:'inbox',collections:[],category:'',portfolio:false,rights_confirmed:false,portfolio_description:'',drafts:{},youtube_title:'',notes:'',destinations:{}});
 function saveBrowserState(state){localStorage.setItem(storageKey,JSON.stringify(state));}
 async function publicLibrary(){if(!publicLibraryPromise)publicLibraryPromise=fetch('/library.json').then(r=>{if(!r.ok)throw new Error('Could not load the public library');return r.json();});return publicLibraryPromise;}
@@ -14,8 +14,8 @@ function zipFiles(files){
  const table=Array.from({length:256},(_,n)=>{for(let i=0;i<8;i++)n=n&1?0xedb88320^(n>>>1):n>>>1;return n>>>0;});
  for(const [path,text] of files){
   const name=enc.encode(path),body=enc.encode(text);let crc=0xffffffff;for(const b of body)crc=table[(crc^b)&255]^(crc>>>8);crc=(crc^0xffffffff)>>>0;
-  const local=new Uint8Array(30+name.length),l=new DataView(local.buffer);l.setUint32(0,0x04034b50,true);l.setUint16(4,20,true);l.setUint16(6,0x800,true);l.setUint32(14,crc,true);l.setUint32(18,body.length,true);l.setUint32(22,body.length,true);l.setUint16(26,name.length,true);local.set(name,30);
-  const header=new Uint8Array(46+name.length),c=new DataView(header.buffer);c.setUint32(0,0x02014b50,true);c.setUint16(4,20,true);c.setUint16(6,20,true);c.setUint16(8,0x800,true);c.setUint32(16,crc,true);c.setUint32(20,body.length,true);c.setUint32(24,body.length,true);c.setUint16(28,name.length,true);c.setUint32(42,offset,true);header.set(name,46);central.push(header);parts.push(local,body);offset+=local.length+body.length;
+  const local=new Uint8Array(30+name.length),l=new DataView(local.buffer);l.setUint32(0,0x04034b50,true);l.setUint16(4,20,true);l.setUint16(6,0x800,true);l.setUint16(12,33,true);l.setUint32(14,crc,true);l.setUint32(18,body.length,true);l.setUint32(22,body.length,true);l.setUint16(26,name.length,true);local.set(name,30);
+  const header=new Uint8Array(46+name.length),c=new DataView(header.buffer);c.setUint32(0,0x02014b50,true);c.setUint16(4,20,true);c.setUint16(6,20,true);c.setUint16(8,0x800,true);c.setUint16(14,33,true);c.setUint32(16,crc,true);c.setUint32(20,body.length,true);c.setUint32(24,body.length,true);c.setUint16(28,name.length,true);c.setUint32(42,offset,true);header.set(name,46);central.push(header);parts.push(local,body);offset+=local.length+body.length;
  }
  const end=new Uint8Array(22),v=new DataView(end.buffer);v.setUint32(0,0x06054b50,true);v.setUint16(8,files.length,true);v.setUint16(10,files.length,true);v.setUint32(12,central.reduce((n,p)=>n+p.length,0),true);v.setUint32(16,offset,true);
  return new Blob([...parts,...central,end],{type:'application/zip'});
@@ -24,6 +24,22 @@ window.mdcHostedAPI=async(path,body)=>{
  if(path==='/api/session')return {paired:true};
  const data=await publicLibrary(),state=browserState();
  const rows=data.items.map(r=>({...r,edit:{...defaultEdit(),...state.items[r.id]}}));
+ if(path==='/api/bundles')return {bundles:Object.values(state.bundles)};
+ if(path==='/api/bundle'){
+  const validIDs=ids=>{if(!Array.isArray(ids)||ids.some(id=>!rows.some(r=>r.id===id)))throw new Error('Unknown content');return [...new Set(ids)];};
+  const name=n=>{if(typeof n!=='string'||!n.trim()||n.trim().length>100)throw new Error('Enter a bundle name of up to 100 characters.');return n.trim();};
+  let bundle=state.bundles[body.id];const now=new Date().toISOString();
+  if(body.action==='create'){const id='bundle-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,9);bundle={id,name:name(body.name),content_ids:validIDs(body.ids||[]),notes:'',created_at:now,updated_at:now};state.bundles[id]=bundle;}
+  else {if(!bundle)throw new Error('Bundle not found.');
+   if(body.action==='add')bundle.content_ids=[...new Set([...bundle.content_ids,...validIDs(body.ids)])];
+   else if(body.action==='remove'){const ids=validIDs(body.ids);bundle.content_ids=bundle.content_ids.filter(id=>!ids.includes(id));}
+   else if(body.action==='reorder'){const ids=validIDs(body.ids);if(ids.length!==bundle.content_ids.length||ids.some(id=>!bundle.content_ids.includes(id)))throw new Error('Reordering must preserve bundle content.');bundle.content_ids=ids;}
+   else if(body.action==='update'){if(body.name!==undefined)bundle.name=name(body.name);if(body.notes!==undefined){if(typeof body.notes!=='string')throw new Error('Invalid notes');bundle.notes=body.notes;}}
+   else if(body.action==='delete')delete state.bundles[body.id];
+   else throw new Error('Unknown bundle action');bundle.updated_at=now;
+  }
+  state.revision++;state.updated_at=now;saveBrowserState(state);return {bundle,revision:state.revision};
+ }
  if(path==='/api/library')return {items:rows,revision:state.revision,categories};
  if(path==='/api/portfolio')return {items:rows.filter(r=>r.edit.portfolio).map(r=>({id:r.id,title:r.edit.title,description:r.edit.portfolio_description,category:r.edit.category,format:r.format,date:r.date,media:r.media})),categories,preview:true};
  if(path==='/api/item'){
@@ -35,8 +51,9 @@ window.mdcHostedAPI=async(path,body)=>{
  }
  if(path==='/api/backup')return {download_url:downloadURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'})),filename:'mdc-browser-drafts-backup.json'};
  if(path==='/api/package'){
-  if(!body.ids?.length||body.ids.length>30||!body.platforms?.length||body.platforms.some(p=>!['Instagram','Facebook','TikTok','YouTube','LinkedIn'].includes(p)))throw new Error('Choose up to 30 items and valid destinations.');
-  const files=[],manifest={created_at:new Date().toISOString(),platforms:body.platforms,items:[],media_policy:'Ordered public Lightroom links; media stays on Adobe. Platforms may require actual files.'};
+  if(!body.ids?.length||body.ids.length>rows.length||!body.platforms?.length||body.platforms.some(p=>!['Instagram','Facebook','TikTok','YouTube','LinkedIn'].includes(p)))throw new Error('Choose content and at least one valid destination.');
+  if(new Set(body.ids).size!==body.ids.length)throw new Error('Duplicate content in package');
+  const files=[],manifest={bundle_name:body.bundle_name||'',bundle_notes:body.bundle_notes||'',created_at:new Date().toISOString(),platforms:body.platforms,items:[],media_policy:'Ordered public Lightroom links; media stays on Adobe. Platforms may require actual files.'};
   for(const id of body.ids){
    const r=rows.find(r=>r.id===id);if(!r)throw new Error('Unknown content');const base=id+'/';files.push([base+'original-caption.txt',r.caption]);
    for(const platform of body.platforms){files.push([base+platform.toLowerCase()+'/caption.txt',r.edit.drafts[platform]??r.caption]);if(platform==='YouTube')files.push([base+'youtube/title.txt',r.edit.youtube_title]);}
