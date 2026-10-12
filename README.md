@@ -38,3 +38,15 @@ No dependencies or API keys are required. Media loads directly from `lightroom.a
 ## Validation
 
 Run `node --test tests/hosted.test.mjs` from this directory. Tests cover public catalog coverage, private-data exclusion, legacy draft persistence, conflicting saves, guest bundles, deduplication, reordering and ZIP packages. Preview with `python3 -m http.server 8766 --directory dist` after building.
+
+## Google Analytics
+
+GA4 measurement ID: `G-RY0NMHYXT8`, property `558463694`, stream `16109373680`. The production custom domain loads `web/analytics.js`; localhost, Netlify previews and the Netlify alternate hostname do not send traffic. No API secret is needed.
+
+Pageviews are manually sent once per route change with generic titles and virtual paths (`/`, `/gallery/search`, `/gallery/content`, `/gallery/photo`, `/gallery/reel`, `/gallery/story`, `/bundles`, `/bundles/detail`). Raw query strings, search terms, content IDs, bundle IDs, captions, notes and bundle names are excluded. Referrers are reduced to their origin. Google Signals and ad personalization are disabled in the tag. This setup does not preserve UTM campaign parameters.
+
+Events: `bundle_create` and `bundle_add` carry only `item_count`; `publishing_package_download` carries `item_count` and `destination_count`. The download event means the browser generated a package, not that it was published or resulted in a sale.
+
+In Analytics stream Enhanced Measurement, keep **Page changes based on browser history events** off to prevent duplicate pageviews. Site search, form interactions, automatic file downloads and YouTube engagement are off; scroll and outbound clicks remain on. Native Lightroom videos are not automatically measured by YouTube engagement.
+
+Check **Reports → Realtime** after visiting the production homepage. Standard report processing and the stream's collection-status banner may lag behind Realtime. Run `node --test tests/analytics.test.mjs tests/hosted.test.mjs` before deploying analytics changes.
