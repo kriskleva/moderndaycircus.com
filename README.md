@@ -21,7 +21,7 @@ From the private Modern Day Circus workspace, run `python3 scripts/map_lightroom
 - `web/library.json`: allowlisted public captions, publication dates and Lightroom URLs.
 - `web/hosted.js`: browser-local workspace and ZIP packages.
 - `web/app.js`, `index.html`, `style.css`: gallery interface.
-- `build.mjs`, `netlify.toml`, `web/_headers`: portable build, routing and response security settings.
+- `build.mjs`, `netlify.toml`: portable build, routing and response security settings.
 
 No dependencies or API keys are required. Media loads directly from `lightroom.adobe.com`.
 
@@ -50,3 +50,5 @@ Events: `bundle_create` and `bundle_add` carry only `item_count`; `publishing_pa
 In Analytics stream Enhanced Measurement, keep **Page changes based on browser history events** off to prevent duplicate pageviews. Site search, form interactions, automatic file downloads and YouTube engagement are off; scroll and outbound clicks remain on. Native Lightroom videos are not automatically measured by YouTube engagement.
 
 Check **Reports → Realtime** after visiting the production homepage. Standard report processing and the stream's collection-status banner may lag behind Realtime. Run `node --test tests/analytics.test.mjs tests/hosted.test.mjs` before deploying analytics changes.
+
+Netlify Git builds explicitly use `netlify.toml` as their configuration file. This avoids the previously inherited security policy that blocked Google scripts. Keep this configuration path set when changing build settings.
