@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import vm from 'node:vm';
+const window={};vm.runInNewContext(readFileSync('web/discovery.js','utf8'),{window,URL,Date,Map,Set});const d=window.MDCDiscovery;
+const library=JSON.parse(readFileSync('web/library.json','utf8')).items;
+assert.equal(library.length,1074);assert.equal(library.reduce((n,r)=>n+r.media.length,0),1211);
+assert.equal(library.filter(r=>r.snapshots.length).length,1017);
+assert(library.every(r=>r.media.every(m=>m.preview_url&&m.width>0&&m.height>0&&m.descriptor.length===48)));
+assert(library.every(r=>r.snapshots.every(s=>s.measurement_period_label===null&&s.period_scope.includes('unverified')&&s.source.startsWith('Meta export · past_instagram_insights/'))));
+const reel=library.find(r=>r.id==='mdc-4ca0a236ef0af42c8c95');assert.equal(d.metric(reel,'Instagram Shares'),44629);assert.equal(d.metric(reel,'Shares'),null);
+const missing=library.find(r=>!r.snapshots.length);assert.equal(d.metric(missing,'Impressions'),null);
+const c=d.comparison(reel,library,'Instagram Shares');assert(c.n>=5&&c.breakout);assert(d.cohort(reel,library,'Instagram Shares').every(r=>r.format==='reel'&&d.ageBand(r)===d.ageBand(reel)));
+const exemplar=library.find(r=>r.format==='post');assert.equal(d.visualMatches(library,exemplar.media[0].descriptor)[0].id,exemplar.id);
+assert.equal(d.descriptorForURL(library,exemplar.media[0].media_url),exemplar.media[0].descriptor);assert.equal(d.descriptorForURL(library,'https://example.com/unknown.jpg'),null);
+const src=readFileSync('web/app.js','utf8'),css=readFileSync('web/style.css','utf8');assert(src.includes("layout='masonry'"));assert(css.includes('column-count:3'));assert(css.includes('.card .open img{display:block;width:100%;height:auto;object-fit:contain}'));assert(src.includes('m.media_url'));
+console.log('Passed: catalog coverage, exact dated metric labels, missing metrics, comparable cohorts, visual matching and uncropped default media.');

@@ -1,6 +1,6 @@
 # Modern Day Circus
 
-Public publishing gallery with 1,074 content groups and 1,211 media assets hosted by Lightroom. No media copies, Instagram export archives, private messages, performance snapshots, private Mac state or credentials are committed or deployed.
+Public publishing gallery with 1,074 content groups and 1,211 media assets hosted by Lightroom. No media copies, Instagram export archives, private messages, account-level analytics, private Mac state or credentials are committed or deployed.
 
 ## Build and publish
 
@@ -14,7 +14,7 @@ Publishing packages are generated in the browser. ZIPs contain platform captions
 
 ## Refresh Lightroom content
 
-From the private Modern Day Circus workspace, run `python3 scripts/map_lightroom_public.py --verify`, then `python3 scripts/prepare_netlify_gallery.py`. The preparation script updates only `web/library.json` and preserves the hosted design. Review the generated changes in `deployment/netlify/`, commit and push to `main`. Metadata is an explicit dated snapshot; refresh after Lightroom edits to update revision-based rendition URLs. Public viewer endpoints may change.
+From the private Modern Day Circus workspace, run `python3 scripts/map_lightroom_public.py --verify`, then `python3 scripts/build_gallery_visual_index.py` (requires ffmpeg and ffprobe), then `python3 scripts/prepare_netlify_gallery.py`. The preparation script updates only `web/library.json` and preserves the hosted design. Review the generated changes in `deployment/netlify/`, commit and push to `main`. Metadata is an explicit dated snapshot; refresh after Lightroom edits to update revision-based rendition URLs. Public viewer endpoints may change.
 
 ## Files
 
@@ -52,3 +52,16 @@ In Analytics stream Enhanced Measurement, keep **Page changes based on browser h
 Check **Reports → Realtime** after visiting the production homepage. Standard report processing and the stream's collection-status banner may lag behind Realtime. Run `node --test tests/analytics.test.mjs tests/hosted.test.mjs` before deploying analytics changes.
 
 Netlify Git builds explicitly use `netlify.toml` as their configuration file. This avoids the previously inherited security policy that blocked Google scripts. Keep this configuration path set when changing build settings.
+
+
+## Discovery revision
+
+The gallery retains the existing fonts and blush/purple palette. Flow, Gallery and Stack collection carousels accompany a default masonry feed. Source aspect ratios are preserved; the largest available Lightroom preview is used without thumbnail substitution or browser-side recompression. Native video and image quality remains limited by the rendition Adobe supplies.
+
+Search suggestions and theme counts come from source captions. Orientation filters use archive dimensions. Bookmarks, named bundles and platform drafts require no sign-in and stay in the current browser. Download actions link to Lightroom media; publishing packages contain captions and source links.
+
+The public catalog includes 1,017 content-linked performance snapshots from the October 7, 2026 Meta export. Exact labels, raw values, export date and source are preserved. Missing metrics remain unavailable. Account demographics and messages are excluded. Comparisons use the same format, export date and publication-age band; the cohort median distinguishes typical results from a breakout (at least five examples and ten times a nonzero median). Measurement periods are unverified. Theme membership and caption mentions do not verify collaborations, authorship, sales or trending searches.
+
+Visual search compares coarse color and spatial layout across all 1,211 archive assets. Videos use the first frame; this is not semantic AI search or a complete visual audit. Uploaded references are processed inside the browser and never uploaded. URL matching supports indexed public Lightroom rendition URLs; other references can be supplied as a local image. Lightroom edits can differ from archive descriptors. The reusable index script caches by source-file signature and preserves the original archives.
+
+Validate with `node --test tests/analytics.test.mjs tests/hosted.test.mjs tests/discovery.test.mjs`, then `node build.mjs`.

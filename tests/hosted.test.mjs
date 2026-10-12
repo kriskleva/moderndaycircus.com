@@ -3,7 +3,7 @@ import {readFileSync,writeFileSync} from 'node:fs';
 import vm from 'node:vm';
 const source=JSON.parse(readFileSync('web/library.json','utf8'));
 assert.equal(source.items.length,1074);assert.equal(source.items.flatMap(r=>r.media).length,1211);
-assert(source.items.every(r=>r.snapshots.length===0&&!('edit' in r)&&r.media.every(m=>m.media_url.startsWith('https://lightroom.adobe.com/v2c/spaces/'))));
+assert(source.items.every(r=>!('edit' in r)&&r.snapshots.every(s=>s.source.startsWith('Meta export · past_instagram_insights/')&&!JSON.stringify(s).includes('Follower Percentage'))&&r.media.every(m=>m.media_url.startsWith('https://lightroom.adobe.com/v2c/spaces/'))));
 const storage=new Map(),blobs=new Map();let counter=0;
 const context=vm.createContext({window:{},TextEncoder,Blob,Date,JSON,Error,Uint8Array,DataView,setTimeout:()=>{},fetch:async()=>({ok:true,json:async()=>source}),localStorage:{getItem:k=>storage.get(k)??null,setItem:(k,v)=>storage.set(k,v)},URL:{createObjectURL:b=>{const url='blob:fixture-'+counter++;blobs.set(url,b);return url;},revokeObjectURL:()=>{}}});
 vm.runInContext(readFileSync('web/hosted.js','utf8'),context);const api=context.window.mdcHostedAPI;

@@ -12,7 +12,8 @@
     let path = '/';
     if (params.has('asset')) path = '/gallery/content';
     else if (params.get('view') === 'bundles') path = params.has('bundle') ? '/bundles/detail' : '/bundles';
-    else if (params.get('view') === 'results') path = '/gallery/search';
+    else if (['results','visual'].includes(params.get('view'))) path = params.get('view') === 'visual' ? '/gallery/visual-search' : '/gallery/search';
+    else if (['collections','collection','insights','favorites'].includes(params.get('view'))) path = '/' + params.get('view');
     else if (format !== 'all') path = '/gallery/' + format;
     return {page_location: 'https://moderndaycircus.com' + path, page_title: 'Modern Day Circus | ' + ({'/':'Home','/gallery/content':'Content','/gallery/search':'Search','/bundles':'Bundles','/bundles/detail':'Bundle'}[path] || format)};
   }
