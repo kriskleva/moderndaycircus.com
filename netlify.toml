@@ -6,12 +6,3 @@
   from = "/portfolio"
   to = "/index.html"
   status = 200
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "DENY"
-    Referrer-Policy = "no-referrer"
-    Content-Security-Policy = "default-src 'self'; img-src 'self' https://lightroom.adobe.com https://*.google-analytics.com https://www.googletagmanager.com; media-src 'self' https://lightroom.adobe.com; script-src 'self' https://www.googletagmanager.com; style-src 'self'; connect-src 'self' https://*.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'none'"
-    Cache-Control = "public, max-age=0, must-revalidate"
