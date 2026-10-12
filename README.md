@@ -21,7 +21,7 @@ From the private Modern Day Circus workspace, run `python3 scripts/map_lightroom
 - `web/library.json`: allowlisted public captions, publication dates and Lightroom URLs.
 - `web/hosted.js`: browser-local workspace and ZIP packages.
 - `web/app.js`, `index.html`, `style.css`: gallery interface.
-- `build.mjs`, `netlify.toml`: portable build and hosting settings.
+- `build.mjs`, `netlify.toml`, `web/_headers`: portable build, routing and response security settings.
 
 No dependencies or API keys are required. Media loads directly from `lightroom.adobe.com`.
 
