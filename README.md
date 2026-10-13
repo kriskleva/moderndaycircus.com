@@ -65,3 +65,23 @@ The public catalog includes 1,017 content-linked performance snapshots from the 
 Visual search compares coarse color and spatial layout across all 1,211 archive assets. Videos use the first frame; this is not semantic AI search or a complete visual audit. Uploaded references are processed inside the browser and never uploaded. URL matching supports indexed public Lightroom rendition URLs; other references can be supplied as a local image. Lightroom edits can differ from archive descriptors. The reusable index script caches by source-file signature and preserves the original archives.
 
 Validate with `node --test tests/analytics.test.mjs tests/hosted.test.mjs tests/discovery.test.mjs`, then `node build.mjs`.
+
+## Manifesto homepage — local review revision
+
+The root route introduces Body, Identity and Maker before leading into the existing library at `/?view=results`. The primary hero action scrolls to `#three-rings`. Explicit ring selections live in `web/manifesto.js`; they do not classify the full catalog. Ring routes reuse the existing content cards, asset viewer and bundle tools.
+
+Selected photos (zero-based asset index 0): hero `mdc-b5ab377bf069b762d97e`; Body `mdc-ee8fcf880bd9adaef623`; Identity `mdc-3dbdb2e7f13046f25124`; Maker `mdc-177f9ef4afd6ff16dbae`; garment detail `mdc-12d007ef5f2d350c2d6e`. All still images in these records were visually reviewed; the Body video's poster and loaded native player were reviewed. The hero keeps the full portrait inside a wide blush composition. Ring photography uses a restrained 3:4 treatment on desktop and natural proportions on mobile. Library default views remain uncropped. Sources remain the catalog's Lightroom URLs, with no new stock or generated artwork.
+
+Fontuna Bold, Inter and Revive 80 Signature files and web-use licenses are not present. No PDF fonts were extracted. Display typography uses Arial Narrow, then Helvetica Neue, then Arial; readable UI/body copy retains Arial/Helvetica. The short handwritten accent uses locally installed Apple Chancery, Segoe Print or cursive. Rendering may differ between operating systems until licensed webfonts are supplied. Existing white/charcoal/blush/purple values are preserved.
+
+The broader program remains a vision. Body's photograph documents personal practice, not a Modern Day Circus facility or partnership. Maker's current selection documents DJ tools and creative practice, not software development or fabrication. Verified visual examples of API/app work would strengthen that collection later.
+
+Preview locally after `node build.mjs`, using the existing static server at `http://localhost:8766/`. No deployment or push is part of this revision. Storage keys and catalog data are unchanged. Existing checks: `node --test tests/analytics.test.mjs tests/hosted.test.mjs tests/discovery.test.mjs`.
+
+### Expanded visual ring curation — October 13, 2026
+
+Collections now contain 5 Body, 8 Identity and 4 Maker groups. The source of truth is the private workspace's `catalog/ring-selections.json`: explicit membership, chosen asset index, editorial title, visual observation, caption attribution, modeling relevance, review scope and exact Lightroom filename/asset ID. Run `python3 scripts/apply_ring_selections.py` from the workspace root to validate and regenerate `web/ring-selections.js`; rebuild here with `node build.mjs`.
+
+No storage or catalog keys changed. Selected previews open the chosen asset while preserving all original carousel media and their order. Editorial card titles do not overwrite saved titles or captions. These selections do not create or modify Adobe albums. Lightroom sources remain the existing public URLs.
+
+This pass reviewed 48 previews from 17 candidates, with additional spaced-frame samples from six video assets. It is a partial visual audit with no audio or continuous motion review. Modeling-goal graphics explain intention, not bookings. The Maker collection shows creative practice, with caption-based authorship/tool context; API/app visual proof remains a gap.
