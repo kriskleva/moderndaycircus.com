@@ -34,7 +34,13 @@
           "sourceReel": 13
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-c6ff40972a4566ea0c6b",
+        "assetIndex": 0,
+        "role": "source",
+        "date": "2025-12-24T15:07:59+00:00"
+      }
     },
     {
       "id": "p1-s2",
@@ -47,7 +53,13 @@
           "sourceReel": 15
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-0992adc367069afc5a1d",
+        "assetIndex": 0,
+        "role": "source",
+        "date": "2025-12-24T19:01:56+00:00"
+      }
     },
     {
       "id": "p1-s3",
@@ -60,7 +72,13 @@
           "sourceReel": 16
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-04dafc1acff969bbcb5a",
+        "assetIndex": 0,
+        "role": "source",
+        "date": "2025-12-25T12:38:19+00:00"
+      }
     },
     {
       "id": "p2-s1",
@@ -73,7 +91,14 @@
           "sourceReel": 16
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-912d7b3ad23b80ec9ad3",
+        "assetIndex": 0,
+        "role": "period-companion",
+        "date": "2025-12-22T15:34:32+00:00",
+        "note": "Archive companion from the same period; the passage’s original caption sources are listed separately."
+      }
     },
     {
       "id": "p2-s4",
@@ -86,7 +111,14 @@
           "sourceReel": 16
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-c00c886397b80a5c6fdc",
+        "assetIndex": 0,
+        "role": "period-companion",
+        "date": "2025-12-26T18:20:53+00:00",
+        "note": "Archive companion from the same period; the passage’s original caption sources are listed separately."
+      }
     }
   ]
 }

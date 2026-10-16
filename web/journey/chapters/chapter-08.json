@@ -34,7 +34,13 @@
           "sourceReel": 48
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-f81b071cd00de05774bd",
+        "assetIndex": 0,
+        "role": "source",
+        "date": "2026-01-26T16:47:19+00:00"
+      }
     },
     {
       "id": "p1-s2",
@@ -47,7 +53,13 @@
           "sourceReel": 30
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-5e5c617fded65847302e",
+        "assetIndex": 0,
+        "role": "source",
+        "date": "2026-01-05T13:06:10+00:00"
+      }
     },
     {
       "id": "p1-s3",
@@ -60,7 +72,14 @@
           "sourceReel": 48
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-de4361405a782661b171",
+        "assetIndex": 0,
+        "role": "period-companion",
+        "date": "2026-01-19T13:39:30+00:00",
+        "note": "Archive companion from the same period; the passage’s original caption sources are listed separately."
+      }
     },
     {
       "id": "p2-s1",
@@ -73,7 +92,14 @@
           "sourceReel": 48
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-de4361405a782661b171",
+        "assetIndex": 1,
+        "role": "period-companion",
+        "date": "2026-01-19T13:39:30+00:00",
+        "note": "Archive companion from the same period; the passage’s original caption sources are listed separately."
+      }
     },
     {
       "id": "p2-s2",
@@ -86,7 +112,13 @@
           "sourceReel": 36
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-25d90bbf9f12ded0ed2a",
+        "assetIndex": 0,
+        "role": "source",
+        "date": "2026-01-12T19:22:30+00:00"
+      }
     },
     {
       "id": "p2-s3",
@@ -99,7 +131,14 @@
           "sourceReel": 30
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-6b86170653c9c9b5c677",
+        "assetIndex": 3,
+        "role": "period-companion",
+        "date": "2026-01-09T12:48:23+00:00",
+        "note": "Archive companion from the same period; the passage’s original caption sources are listed separately."
+      }
     },
     {
       "id": "p2-s4",
@@ -112,7 +151,13 @@
           "sourceReel": 39
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-7dfce31c1a1c457a059e",
+        "assetIndex": 0,
+        "role": "source",
+        "date": "2026-01-14T21:47:45+00:00"
+      }
     },
     {
       "id": "p2-s5",
@@ -125,7 +170,13 @@
           "sourceReel": 45
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-127e5f781ea03fb5d119",
+        "assetIndex": 0,
+        "role": "source",
+        "date": "2026-01-20T01:54:46+00:00"
+      }
     },
     {
       "id": "p2-s6",
@@ -138,7 +189,14 @@
           "sourceReel": 48
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-24c55b2452c19dfb90bc",
+        "assetIndex": 0,
+        "role": "period-companion",
+        "date": "2026-02-05T20:19:03+00:00",
+        "note": "Archive companion from the same period; the passage’s original caption sources are listed separately."
+      }
     }
   ]
 }

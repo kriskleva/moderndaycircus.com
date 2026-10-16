@@ -49,3 +49,23 @@ test('mixed-source moments change media at the relevant manuscript sentence',()=
  assert.equal(joy.find(s=>s.text.includes('lemon-party outfit')).sources[0].sourceReel,123);
  assert.equal(joy.find(s=>s.text.includes('Tamarack')).sources[0].sourceReel,125);
 });
+test('every scene has a globally unique Lightroom background from its time period',()=>{
+ const used=new Set();let images=0,companions=0;
+ for(const chapter of chapters){
+  for(const scene of chapter.scenes){
+   const bg=scene.background,r=library.get(bg.contentId),media=r?.media[bg.assetIndex];
+   assert.ok(media,`${chapter.id}/${scene.id} background exists`);
+   assert.equal(bg.date,r.date);assert.ok(['source','period-companion'].includes(bg.role));
+   const asset=media.media_url.match(/\/assets\/([^/]+)\//)?.[1];assert.ok(asset);
+   assert.ok(!used.has(asset),`Repeated physical Lightroom background: ${asset}`);used.add(asset);
+   if(media.kind==='image')images++;
+   if(bg.role==='period-companion'){
+    companions++;assert.ok(bg.note.includes('original caption sources'));
+    const anchor=chapter.number===24?chapter.scenes[0]:scene;
+    const sourceDate=library.get(anchor.sources[0].contentId).date;
+    assert.ok(Math.abs(Date.parse(bg.date)-Date.parse(sourceDate))<=21*86400000,`${chapter.id}/${scene.id} stays in the same period`);
+   }else assert.ok(scene.sources.some(s=>s.contentId===bg.contentId&&s.assetIndex===bg.assetIndex));
+  }
+ }
+ assert.equal(used.size,112);assert.equal(images,34);assert.equal(companions,54);
+});

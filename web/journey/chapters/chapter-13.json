@@ -34,7 +34,13 @@
           "sourceReel": 65
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-a36ab15bb3f7daac24e7",
+        "assetIndex": 0,
+        "role": "source",
+        "date": "2026-03-26T14:28:23+00:00"
+      }
     },
     {
       "id": "p2-s1",
@@ -52,7 +58,13 @@
           "sourceReel": 66
         }
       ],
-      "attribution": "Editorial synthesis of these captions"
+      "attribution": "Editorial synthesis of these captions",
+      "background": {
+        "contentId": "mdc-ebaae551083840728baa",
+        "assetIndex": 0,
+        "role": "source",
+        "date": "2026-04-12T13:21:29+00:00"
+      }
     },
     {
       "id": "p2-s2",
@@ -70,7 +82,14 @@
           "sourceReel": 67
         }
       ],
-      "attribution": "Editorial synthesis of these captions"
+      "attribution": "Editorial synthesis of these captions",
+      "background": {
+        "contentId": "mdc-22fe09f1c65b5aad7a59",
+        "assetIndex": 0,
+        "role": "period-companion",
+        "date": "2026-04-07T10:24:27+00:00",
+        "note": "Archive companion from the same period; the passage’s original caption sources are listed separately."
+      }
     },
     {
       "id": "p2-s3",
@@ -88,7 +107,13 @@
           "sourceReel": 72
         }
       ],
-      "attribution": "Editorial synthesis of these captions"
+      "attribution": "Editorial synthesis of these captions",
+      "background": {
+        "contentId": "mdc-8d5a32ae838380f84058",
+        "assetIndex": 0,
+        "role": "source",
+        "date": "2026-04-03T14:02:37+00:00"
+      }
     },
     {
       "id": "p2-s4",
@@ -106,7 +131,13 @@
           "sourceReel": 65
         }
       ],
-      "attribution": "Editorial synthesis of these captions"
+      "attribution": "Editorial synthesis of these captions",
+      "background": {
+        "contentId": "mdc-3e120ab25dfd06068702",
+        "assetIndex": 0,
+        "role": "source",
+        "date": "2026-04-27T18:25:24+00:00"
+      }
     }
   ]
 }

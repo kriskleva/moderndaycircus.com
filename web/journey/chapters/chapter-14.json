@@ -34,7 +34,13 @@
           "sourceReel": 77
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-2a89a86d1ce68eb0d3d6",
+        "assetIndex": 0,
+        "role": "source",
+        "date": "2026-05-26T13:21:39+00:00"
+      }
     },
     {
       "id": "p1-s3",
@@ -47,7 +53,14 @@
           "sourceReel": 77
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-dbe4ed79d4fd3fb7fcb1",
+        "assetIndex": 0,
+        "role": "period-companion",
+        "date": "2026-05-20T11:47:20+00:00",
+        "note": "Archive companion from the same period; the passage’s original caption sources are listed separately."
+      }
     },
     {
       "id": "p2-s1",
@@ -60,7 +73,14 @@
           "sourceReel": 77
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-3bf967b368aba1adb366",
+        "assetIndex": 0,
+        "role": "period-companion",
+        "date": "2026-05-19T11:57:51+00:00",
+        "note": "Archive companion from the same period; the passage’s original caption sources are listed separately."
+      }
     },
     {
       "id": "p2-s6",
@@ -73,7 +93,14 @@
           "sourceReel": 77
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-6ccf0cde70b676a36cb5",
+        "assetIndex": 0,
+        "role": "period-companion",
+        "date": "2026-05-27T11:17:09+00:00",
+        "note": "Archive companion from the same period; the passage’s original caption sources are listed separately."
+      }
     }
   ]
 }

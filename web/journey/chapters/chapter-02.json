@@ -34,7 +34,13 @@
           "sourceReel": 4
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-29b4c3d1bacc0de87385",
+        "assetIndex": 0,
+        "role": "source",
+        "date": "2025-12-09T22:47:21+00:00"
+      }
     },
     {
       "id": "p1-s2",
@@ -47,7 +53,13 @@
           "sourceReel": 5
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-00bed3280d67b0a8f8a4",
+        "assetIndex": 0,
+        "role": "source",
+        "date": "2025-12-10T14:55:26+00:00"
+      }
     },
     {
       "id": "p1-s4",
@@ -60,7 +72,14 @@
           "sourceReel": 5
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-bee9dad489de5e653b65",
+        "assetIndex": 0,
+        "role": "period-companion",
+        "date": "2025-12-09T14:06:34+00:00",
+        "note": "Archive companion from the same period; the passage’s original caption sources are listed separately."
+      }
     },
     {
       "id": "p2-s1",
@@ -73,7 +92,14 @@
           "sourceReel": 5
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-d5c27d03881b7b7b9f49",
+        "assetIndex": 0,
+        "role": "period-companion",
+        "date": "2025-12-17T20:11:25+00:00",
+        "note": "Archive companion from the same period; the passage’s original caption sources are listed separately."
+      }
     },
     {
       "id": "p2-s3",
@@ -86,7 +112,14 @@
           "sourceReel": 5
         }
       ],
-      "attribution": "Adapted from the original caption"
+      "attribution": "Adapted from the original caption",
+      "background": {
+        "contentId": "mdc-fe8a60a65912e3ed6d44",
+        "assetIndex": 0,
+        "role": "period-companion",
+        "date": "2025-12-20T12:57:23+00:00",
+        "note": "Archive companion from the same period; the passage’s original caption sources are listed separately."
+      }
     }
   ]
 }
