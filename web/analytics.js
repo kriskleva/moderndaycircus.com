@@ -17,6 +17,8 @@
     else if (['results','visual'].includes(params.get('view'))) path = params.get('view') === 'visual' ? '/gallery/visual-search' : '/gallery/search';
     else if (params.get('view') === 'ring') path = '/rings/' + (['body','identity','maker'].includes(params.get('ring')) ? params.get('ring') : 'all');
     else if (['collections','collection','insights','favorites'].includes(params.get('view'))) path = '/' + params.get('view');
+    else if (['feed','reels','stories'].includes(params.get('view'))) path='/gallery/'+params.get('view');
+    else if (params.get('view')==='manifesto')path='/manifesto';
     else if (format !== 'all') path = '/gallery/' + format;
     return {page_location: 'https://moderndaycircus.com' + path, page_title: 'Modern Day Circus | ' + ({'/':'Home','/gallery/content':'Content','/gallery/search':'Search','/bundles':'Bundles','/bundles/detail':'Bundle'}[path] || (path.startsWith('/journey')?'Journey'+(path.split('/')[2]?' | '+path.split('/')[2]:''):format))};
   }

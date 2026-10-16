@@ -45,7 +45,7 @@
    active=Math.max(0,active);
    let timer,resizeFrame,pausedByUser=false,engagementTimer;
    const sceneMetrics=()=>({...metrics,scene_number:active+1});
-   const engage=()=>{clearTimeout(engagementTimer);if(!document.hidden&&!main.querySelector('dialog[open]'))engagementTimer=setTimeout(()=>window.mdcUXOnce?.('scene_engaged',{...sceneMetrics(),active_seconds:10}),10000);};
+   const engage=()=>{clearTimeout(engagementTimer);if(!document.hidden&&!main.querySelector('dialog[open]'))engagementTimer=setTimeout(()=>window.mdcUXOnce?.('scene_engaged',sceneMetrics()),10000);};
    const sheets=[...main.querySelectorAll('dialog')];
    const currentMedia=()=>rail.children[active]?.querySelector('.scene-media');
    const currentVideo=()=>currentMedia()?.querySelector('video');
