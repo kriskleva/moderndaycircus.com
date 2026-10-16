@@ -7,18 +7,6 @@
     "I was cutting collars and sleeves off linen shirts, making clothes feel closer to what I actually wanted to wear. That same willingness to intervene in my own experience showed up on the water.",
     "At the Pilot Regatta, I joined Tamarack's crew, asked endless questions, and worked the bow. We brought home third place. I was the new person learning from people who knew more. Again. The pattern was becoming clear: find something compelling, find the people, ask the questions, and join in."
   ],
-  "media": [
-    {
-      "contentId": "mdc-8faa1abdeea4dab5a253",
-      "assetIndex": 0,
-      "sourceReel": 93
-    },
-    {
-      "contentId": "mdc-1ed9f1a4a26643465aa2",
-      "assetIndex": 0,
-      "sourceReel": 94
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -33,5 +21,59 @@
       "prompt": "Make one small adjustment to an everyday object, plan, or routine so it suits you better."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "I was cutting collars and sleeves off linen shirts, making clothes feel closer to what I actually wanted to wear.",
+      "sources": [
+        {
+          "contentId": "mdc-8faa1abdeea4dab5a253",
+          "assetIndex": 0,
+          "sourceReel": 93
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p1-s2",
+      "passageIndex": 0,
+      "text": "That same willingness to intervene in my own experience showed up on the water.",
+      "sources": [
+        {
+          "contentId": "mdc-1ed9f1a4a26643465aa2",
+          "assetIndex": 0,
+          "sourceReel": 94
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "At the Pilot Regatta, I joined Tamarack's crew, asked endless questions, and worked the bow. We brought home third place. I was the new person learning from people who knew more. Again.",
+      "sources": [
+        {
+          "contentId": "mdc-1ed9f1a4a26643465aa2",
+          "assetIndex": 0,
+          "sourceReel": 94
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s5",
+      "passageIndex": 1,
+      "text": "The pattern was becoming clear: find something compelling, find the people, ask the questions, and join in.",
+      "sources": [
+        {
+          "contentId": "mdc-1ed9f1a4a26643465aa2",
+          "assetIndex": 0,
+          "sourceReel": 94
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    }
+  ]
 }

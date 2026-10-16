@@ -7,13 +7,6 @@
     "For years, my creativity had lived behind a camera or a pair of FPV goggles. I knew how to contribute through a skill. I knew how to make someone else's moment look and feel extraordinary.",
     "Now I was becoming curious about being the subject. Watching my own movement. Choosing the song. Editing my own life into something I could feel and understand. I still loved making the video. I was discovering what it meant to be inside it."
   ],
-  "media": [
-    {
-      "contentId": "mdc-2a89a86d1ce68eb0d3d6",
-      "assetIndex": 0,
-      "sourceReel": 77
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -28,5 +21,59 @@
       "prompt": "Capture one ordinary moment in a sentence or image. Keep it for yourself if you prefer."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "For years, my creativity had lived behind a camera or a pair of FPV goggles. I knew how to contribute through a skill.",
+      "sources": [
+        {
+          "contentId": "mdc-2a89a86d1ce68eb0d3d6",
+          "assetIndex": 0,
+          "sourceReel": 77
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p1-s3",
+      "passageIndex": 0,
+      "text": "I knew how to make someone else's moment look and feel extraordinary.",
+      "sources": [
+        {
+          "contentId": "mdc-2a89a86d1ce68eb0d3d6",
+          "assetIndex": 0,
+          "sourceReel": 77
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "Now I was becoming curious about being the subject. Watching my own movement. Choosing the song. Editing my own life into something I could feel and understand. I still loved making the video.",
+      "sources": [
+        {
+          "contentId": "mdc-2a89a86d1ce68eb0d3d6",
+          "assetIndex": 0,
+          "sourceReel": 77
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s6",
+      "passageIndex": 1,
+      "text": "I was discovering what it meant to be inside it.",
+      "sources": [
+        {
+          "contentId": "mdc-2a89a86d1ce68eb0d3d6",
+          "assetIndex": 0,
+          "sourceReel": 77
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    }
+  ]
 }

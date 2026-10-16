@@ -7,13 +7,6 @@
     "It was a lonely Christmas season. I said that plainly. Emotional turbulence had pulled my attention toward creativity, healing, and purpose, but it hadn't made the loneliness disappear.",
     "I still wanted to dress up. Still wanted to make something. Still wanted to laugh. The circus gave me a language for holding all of that at once: a costume, a crooked smile, a little smudged makeup. Joy and grief could share the same show. I didn't have to wait until I felt wonderful to make something honest."
   ],
-  "media": [
-    {
-      "contentId": "mdc-615dbdb03a083bdc4c53",
-      "assetIndex": 0,
-      "sourceReel": 6
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -28,5 +21,59 @@
       "prompt": "Make a tiny expression of how today feels: a sentence, a sketch, a photo, or a song choice."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "It was a lonely Christmas season. I said that plainly. Emotional turbulence had pulled my attention toward creativity, healing, and purpose, but it hadn't made the loneliness disappear.",
+      "sources": [
+        {
+          "contentId": "mdc-615dbdb03a083bdc4c53",
+          "assetIndex": 0,
+          "sourceReel": 6
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "I still wanted to dress up. Still wanted to make something. Still wanted to laugh.",
+      "sources": [
+        {
+          "contentId": "mdc-615dbdb03a083bdc4c53",
+          "assetIndex": 0,
+          "sourceReel": 6
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s4",
+      "passageIndex": 1,
+      "text": "The circus gave me a language for holding all of that at once: a costume, a crooked smile, a little smudged makeup. Joy and grief could share the same show.",
+      "sources": [
+        {
+          "contentId": "mdc-615dbdb03a083bdc4c53",
+          "assetIndex": 0,
+          "sourceReel": 6
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s6",
+      "passageIndex": 1,
+      "text": "I didn't have to wait until I felt wonderful to make something honest.",
+      "sources": [
+        {
+          "contentId": "mdc-615dbdb03a083bdc4c53",
+          "assetIndex": 0,
+          "sourceReel": 6
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    }
+  ]
 }

@@ -7,23 +7,6 @@
     "I still got anxious. Still got frustrated. Still felt myself pulled away from the person I wanted to be. By September, I could describe a process for returning: quiet, movement, making, time outside, reflection.",
     "Sailing kept offering its own version of the lesson. Learn where effort helps. Learn where surrender helps. I couldn't command the wind or the tide, but I could keep learning to move with them. Then came a softer realization: I was following myself and discovering love already present in the life I was living."
   ],
-  "media": [
-    {
-      "contentId": "mdc-5a888a6c5b180dd97676",
-      "assetIndex": 0,
-      "sourceReel": 170
-    },
-    {
-      "contentId": "mdc-510fb131e0548344f7db",
-      "assetIndex": 0,
-      "sourceReel": 183
-    },
-    {
-      "contentId": "mdc-b553723b4dbb811f8a8d",
-      "assetIndex": 0,
-      "sourceReel": 185
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -38,5 +21,46 @@
       "prompt": "Try one item from your return-to-self list. Notice what it offers you today."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "I still got anxious. Still got frustrated. Still felt myself pulled away from the person I wanted to be. By September, I could describe a process for returning: quiet, movement, making, time outside, reflection.",
+      "sources": [
+        {
+          "contentId": "mdc-5a888a6c5b180dd97676",
+          "assetIndex": 0,
+          "sourceReel": 170
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "Sailing kept offering its own version of the lesson. Learn where effort helps. Learn where surrender helps. I couldn't command the wind or the tide, but I could keep learning to move with them.",
+      "sources": [
+        {
+          "contentId": "mdc-510fb131e0548344f7db",
+          "assetIndex": 0,
+          "sourceReel": 183
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s5",
+      "passageIndex": 1,
+      "text": "Then came a softer realization: I was following myself and discovering love already present in the life I was living.",
+      "sources": [
+        {
+          "contentId": "mdc-b553723b4dbb811f8a8d",
+          "assetIndex": 0,
+          "sourceReel": 185
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    }
+  ]
 }

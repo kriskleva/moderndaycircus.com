@@ -7,18 +7,6 @@
     "I wrote about respecting the power in other people. Then I had to turn the thought around. What about the way I spoke to myself? The doubts about how I looked, how I dressed, whether my life was polished enough to belong in the room.",
     "I could recognize cruelty when it came from someone else. Learning to recognize it in my own internal voice was another kind of work. This chapter began with a decision to stop dismissing myself before anyone else had the chance."
   ],
-  "media": [
-    {
-      "contentId": "mdc-29b4c3d1bacc0de87385",
-      "assetIndex": 0,
-      "sourceReel": 4
-    },
-    {
-      "contentId": "mdc-00bed3280d67b0a8f8a4",
-      "assetIndex": 0,
-      "sourceReel": 5
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -33,5 +21,72 @@
       "prompt": "Choose one sentence you would say to encourage a friend. Read it back to yourself before your next small challenge."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "I wrote about respecting the power in other people.",
+      "sources": [
+        {
+          "contentId": "mdc-29b4c3d1bacc0de87385",
+          "assetIndex": 0,
+          "sourceReel": 4
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p1-s2",
+      "passageIndex": 0,
+      "text": "Then I had to turn the thought around. What about the way I spoke to myself?",
+      "sources": [
+        {
+          "contentId": "mdc-00bed3280d67b0a8f8a4",
+          "assetIndex": 0,
+          "sourceReel": 5
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p1-s4",
+      "passageIndex": 0,
+      "text": "The doubts about how I looked, how I dressed, whether my life was polished enough to belong in the room.",
+      "sources": [
+        {
+          "contentId": "mdc-00bed3280d67b0a8f8a4",
+          "assetIndex": 0,
+          "sourceReel": 5
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "I could recognize cruelty when it came from someone else. Learning to recognize it in my own internal voice was another kind of work.",
+      "sources": [
+        {
+          "contentId": "mdc-00bed3280d67b0a8f8a4",
+          "assetIndex": 0,
+          "sourceReel": 5
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s3",
+      "passageIndex": 1,
+      "text": "This chapter began with a decision to stop dismissing myself before anyone else had the chance.",
+      "sources": [
+        {
+          "contentId": "mdc-00bed3280d67b0a8f8a4",
+          "assetIndex": 0,
+          "sourceReel": 5
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    }
+  ]
 }

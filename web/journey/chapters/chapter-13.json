@@ -7,23 +7,6 @@
     "After winter, I found myself going to the waterfall near home. Water moving past my feet. Cold rain against my back. A way to begin again without needing to explain everything first.",
     "Friends and fire belonged to this season, too. New toys, new movement, the familiar awkwardness of learning. I kept discovering that curiosity could lead me out of my own head. Sometimes the next useful thing was to go outside, move, and let an experience become more interesting than the thoughts circling around it."
   ],
-  "media": [
-    {
-      "contentId": "mdc-a36ab15bb3f7daac24e7",
-      "assetIndex": 0,
-      "sourceReel": 65
-    },
-    {
-      "contentId": "mdc-8d5a32ae838380f84058",
-      "assetIndex": 0,
-      "sourceReel": 67
-    },
-    {
-      "contentId": "mdc-ebaae551083840728baa",
-      "assetIndex": 0,
-      "sourceReel": 70
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -38,5 +21,92 @@
       "prompt": "If it is accessible to you, spend five minutes in a place you enjoy. Notice one sound, one texture, and one detail."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "After winter, I found myself going to the waterfall near home. Water moving past my feet. Cold rain against my back. A way to begin again without needing to explain everything first.",
+      "sources": [
+        {
+          "contentId": "mdc-a36ab15bb3f7daac24e7",
+          "assetIndex": 0,
+          "sourceReel": 65
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "Friends and fire belonged to this season, too.",
+      "sources": [
+        {
+          "contentId": "mdc-ebaae551083840728baa",
+          "assetIndex": 0,
+          "sourceReel": 70
+        },
+        {
+          "contentId": "mdc-8c9b55eee02386bcb318",
+          "assetIndex": 0,
+          "sourceReel": 66
+        }
+      ],
+      "attribution": "Editorial synthesis of these captions"
+    },
+    {
+      "id": "p2-s2",
+      "passageIndex": 1,
+      "text": "New toys, new movement, the familiar awkwardness of learning.",
+      "sources": [
+        {
+          "contentId": "mdc-ebaae551083840728baa",
+          "assetIndex": 0,
+          "sourceReel": 70
+        },
+        {
+          "contentId": "mdc-8d5a32ae838380f84058",
+          "assetIndex": 0,
+          "sourceReel": 67
+        }
+      ],
+      "attribution": "Editorial synthesis of these captions"
+    },
+    {
+      "id": "p2-s3",
+      "passageIndex": 1,
+      "text": "I kept discovering that curiosity could lead me out of my own head.",
+      "sources": [
+        {
+          "contentId": "mdc-8d5a32ae838380f84058",
+          "assetIndex": 0,
+          "sourceReel": 67
+        },
+        {
+          "contentId": "mdc-3e120ab25dfd06068702",
+          "assetIndex": 0,
+          "sourceReel": 72
+        }
+      ],
+      "attribution": "Editorial synthesis of these captions"
+    },
+    {
+      "id": "p2-s4",
+      "passageIndex": 1,
+      "text": "Sometimes the next useful thing was to go outside, move, and let an experience become more interesting than the thoughts circling around it.",
+      "sources": [
+        {
+          "contentId": "mdc-3e120ab25dfd06068702",
+          "assetIndex": 0,
+          "sourceReel": 72
+        },
+        {
+          "contentId": "mdc-a36ab15bb3f7daac24e7",
+          "assetIndex": 0,
+          "sourceReel": 65
+        }
+      ],
+      "attribution": "Editorial synthesis of these captions"
+    }
+  ]
 }

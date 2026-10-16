@@ -7,18 +7,6 @@
     "There was a date-night runway and a matching kit. There was a clearer statement of boundaries: I wanted curiosity, energy, and choosing to be mutual.",
     "I was becoming more willing to say what I wanted without turning it into an argument for why someone should want me. Connection mattered deeply. So did the way it felt to be inside that connection. I wanted to keep enjoying my life while making room for people who wanted to meet me there."
   ],
-  "media": [
-    {
-      "contentId": "mdc-d797a812594f95a831d3",
-      "assetIndex": 0,
-      "sourceReel": 154
-    },
-    {
-      "contentId": "mdc-dca178b7cc9e73e0b2b2",
-      "assetIndex": 0,
-      "sourceReel": 155
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -33,5 +21,59 @@
       "prompt": "Choose one small action that respects your time and energy. You can give yourself time before responding."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "There was a date-night runway and a matching kit.",
+      "sources": [
+        {
+          "contentId": "mdc-d797a812594f95a831d3",
+          "assetIndex": 0,
+          "sourceReel": 154
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p1-s2",
+      "passageIndex": 0,
+      "text": "There was a clearer statement of boundaries: I wanted curiosity, energy, and choosing to be mutual.",
+      "sources": [
+        {
+          "contentId": "mdc-dca178b7cc9e73e0b2b2",
+          "assetIndex": 0,
+          "sourceReel": 155
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "I was becoming more willing to say what I wanted without turning it into an argument for why someone should want me. Connection mattered deeply.",
+      "sources": [
+        {
+          "contentId": "mdc-dca178b7cc9e73e0b2b2",
+          "assetIndex": 0,
+          "sourceReel": 155
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s3",
+      "passageIndex": 1,
+      "text": "So did the way it felt to be inside that connection. I wanted to keep enjoying my life while making room for people who wanted to meet me there.",
+      "sources": [
+        {
+          "contentId": "mdc-dca178b7cc9e73e0b2b2",
+          "assetIndex": 0,
+          "sourceReel": 155
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    }
+  ]
 }

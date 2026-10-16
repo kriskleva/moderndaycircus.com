@@ -7,23 +7,6 @@
     "By July, I had a name for what I was doing: a character study of my own life. The wins, the failures, the mentors, the adventures, the relationships, the style, the creative experiments.",
     "Watching myself was helping me understand myself. Technology could support that attention: cameras, ideas captured before they disappeared, tools that made room to create. Video editing could be a place to move through emotion. The work was becoming a record I could return to and recognize."
   ],
-  "media": [
-    {
-      "contentId": "mdc-f6a4306d3ebd724e69d7",
-      "assetIndex": 0,
-      "sourceReel": 99
-    },
-    {
-      "contentId": "mdc-1348c88de0d657e23d6a",
-      "assetIndex": 0,
-      "sourceReel": 109
-    },
-    {
-      "contentId": "mdc-ed02729c25d883600c2d",
-      "assetIndex": 0,
-      "sourceReel": 114
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -38,5 +21,77 @@
       "prompt": "Save the moment in a note, photo, or voice memo. Add one sentence about why it matters to you."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "By July, I had a name for what I was doing: a character study of my own life. The wins, the failures, the mentors, the adventures, the relationships, the style, the creative experiments.",
+      "sources": [
+        {
+          "contentId": "mdc-f6a4306d3ebd724e69d7",
+          "assetIndex": 0,
+          "sourceReel": 99
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "Watching myself was helping me understand myself.",
+      "sources": [
+        {
+          "contentId": "mdc-f6a4306d3ebd724e69d7",
+          "assetIndex": 0,
+          "sourceReel": 99
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s2",
+      "passageIndex": 1,
+      "text": "Technology could support that attention: cameras, ideas captured before they disappeared, tools that made room to create.",
+      "sources": [
+        {
+          "contentId": "mdc-1348c88de0d657e23d6a",
+          "assetIndex": 0,
+          "sourceReel": 109
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s3",
+      "passageIndex": 1,
+      "text": "Video editing could be a place to move through emotion.",
+      "sources": [
+        {
+          "contentId": "mdc-ed02729c25d883600c2d",
+          "assetIndex": 0,
+          "sourceReel": 114
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s4",
+      "passageIndex": 1,
+      "text": "The work was becoming a record I could return to and recognize.",
+      "sources": [
+        {
+          "contentId": "mdc-f6a4306d3ebd724e69d7",
+          "assetIndex": 0,
+          "sourceReel": 99
+        },
+        {
+          "contentId": "mdc-ed02729c25d883600c2d",
+          "assetIndex": 0,
+          "sourceReel": 114
+        }
+      ],
+      "attribution": "Editorial synthesis of these captions"
+    }
+  ]
 }

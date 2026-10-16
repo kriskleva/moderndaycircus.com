@@ -7,13 +7,6 @@
     "There was a quieter stretch online because I was building. I described a Shopify project that could bring wellness, movement, fashion, creative technology, and my own experiments into one place.",
     "Modern Day Circus was taking shape as a place where these interests could live together. The programmer, the maker, the person training before dawn, the person learning to walk a runway: I was looking for a way to let all of them belong in the same story."
   ],
-  "media": [
-    {
-      "contentId": "mdc-eaf36fd37582324ffad3",
-      "assetIndex": 0,
-      "sourceReel": 56
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -28,5 +21,46 @@
       "prompt": "Give your three interests a shared page: write a name, sketch a corner, or make a small outline."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "There was a quieter stretch online because I was building. I described a Shopify project that could bring wellness, movement, fashion, creative technology, and my own experiments into one place.",
+      "sources": [
+        {
+          "contentId": "mdc-eaf36fd37582324ffad3",
+          "assetIndex": 0,
+          "sourceReel": 56
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "Modern Day Circus was taking shape as a place where these interests could live together.",
+      "sources": [
+        {
+          "contentId": "mdc-eaf36fd37582324ffad3",
+          "assetIndex": 0,
+          "sourceReel": 56
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s2",
+      "passageIndex": 1,
+      "text": "The programmer, the maker, the person training before dawn, the person learning to walk a runway: I was looking for a way to let all of them belong in the same story.",
+      "sources": [
+        {
+          "contentId": "mdc-eaf36fd37582324ffad3",
+          "assetIndex": 0,
+          "sourceReel": 56
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    }
+  ]
 }

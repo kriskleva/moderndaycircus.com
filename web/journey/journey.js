@@ -3,64 +3,109 @@
  const main=document.querySelector('#journey'),key='mdc-becoming-v1';
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  let state={chapters:{}},manifest,library,panels,active=0,generation=0,cleanup=()=>{};
- try { const value=JSON.parse(localStorage.getItem(key));if(value&&value.chapters&&typeof value.chapters==='object'&&!Array.isArray(value.chapters))state=value; } catch {}
- function save(){
-  try { localStorage.setItem(key,JSON.stringify(state));document.querySelector('#storage-status').textContent='Your place and reflections stay in this browser.';return true; }
-  catch { document.querySelector('#storage-status').textContent='Storage unavailable. Your place and reflections will be lost when you leave.';return false; }
- }
+ let sound=false,textVisible=true,sourceIndices={};
+ try{const value=JSON.parse(localStorage.getItem(key));if(value?.chapters&&typeof value.chapters==='object'&&!Array.isArray(value.chapters))state=value;}catch{}
+ function save(){try{localStorage.setItem(key,JSON.stringify(state));document.querySelector('#storage-status').textContent='Your place and reflections stay in this browser.';return true;}catch{document.querySelector('#storage-status').textContent='Storage unavailable. Keep a copy of your reflections before leaving.';return false;}}
  async function get(url){const response=await fetch(url);if(!response.ok)throw Error('This part of the journey could not be opened.');return response.json();}
- const url=(id,panel=0)=>`/journey/?chapter=${encodeURIComponent(id)}&panel=${panel}`;
- const go=id=>{history.pushState({},'',url(id));render();window.scrollTo(0,0);};
- function cover(id){const m=library.find(r=>r.id===id)?.media[0];return m?.preview_url||m?.thumbnail_url||m?.media_url;}
+ const url=(id,scene='')=>`/journey/?chapter=${encodeURIComponent(id)}${scene?`&scene=${encodeURIComponent(scene)}`:''}`;
+ const record=id=>library.find(r=>r.id===id);
+ const preview=m=>m?.preview_url||m?.thumbnail_url||m?.media_url;
+ const cover=id=>preview(record(id)?.media[0]);
+ function go(id,scene=''){history.pushState({},'',url(id,scene));render();window.scrollTo(0,0);}
  function landing(){
+  document.body.classList.remove('reading');
   const chapters=manifest.chapters,resume=chapters.find(c=>c.id===state.last),count=chapters.filter(c=>state.chapters[c.id]?.complete).length;
-  main.innerHTML=`<section class="landing"><div class="landing-intro"><p class="eyebrow">A personal story · An invitation to reflect</p><h1>A year of<br><em>becoming.</em></h1><p class="intro">${esc(manifest.description)}</p><div class="actions"><a class="primary" href="${url(resume?.id||chapters[0].id,resume?state.chapters[resume.id]?.panel||0:0)}">${resume?'Return to your place':'Begin the journey'} ↗</a><a class="secondary" href="#chapters">The 24 chapters ↓</a></div><p class="quiet">Read a little. Reflect if you like. Come back to yourself.</p></div><figure class="landing-image"><img src="${esc(cover('mdc-b5ab377bf069b762d97e'))}" alt="Studio portrait in a red ensemble"><figcaption>Body. Identity. Maker.</figcaption></figure></section><section class="timeline" id="chapters"><div class="timeline-heading"><p class="eyebrow">November 2025 — October 2026</p><p class="quiet">${count} of 24 chapters read</p></div><ol class="chapter-list">${chapters.map((c,i)=>`<li><a href="${url(c.id)}"><small>${String(i+1).padStart(2,'0')}</small><span><strong>${esc(c.title)}</strong><small>${esc(c.period)}</small></span><small>${state.chapters[c.id]?.complete?'Read ✓':'↗'}</small></a></li>`).join('')}</ol><details class="source-note"><summary>About the story & original sources</summary><p>${esc(manifest.sourceNote)}</p><p>Reflection exercises are new editorial invitations. They are optional and are separate from the original narrative and captions.</p><a href="/journey/sources.json" download="a-year-of-becoming-original-captions.json">Download all 199 original reel captions ↓</a></details></section>`;
+  main.innerHTML=`<section class="landing"><figure class="landing-image"><img src="${esc(cover('mdc-b5ab377bf069b762d97e'))}" alt="Studio portrait in a red ensemble"></figure><div class="landing-intro"><p class="eyebrow">Modern Day Circus · 24 chapters</p><h1>A year of<br><em>becoming.</em></h1><p class="intro">${esc(manifest.description)}</p><div class="actions"><a class="primary" href="${url(resume?.id||chapters[0].id,resume?state.chapters[resume.id]?.sceneId||'':'')}">${resume?'Return to your place':'Begin the journey'} ↗</a><a class="secondary" href="#chapters">Chapters ↓</a></div></div></section><section class="timeline" id="chapters"><div class="timeline-heading"><p class="eyebrow">November 2025 — October 2026</p><p class="quiet">${count} of 24 read</p></div><ol class="chapter-list">${chapters.map((c,i)=>`<li><a href="${url(c.id)}"><img loading="lazy" src="${esc(cover(c.coverId))}" alt=""><small>${String(i+1).padStart(2,'0')}</small><span><strong>${esc(c.title)}</strong><small>${esc(c.period)}</small></span><small>${state.chapters[c.id]?.complete?'✓':'↗'}</small></a></li>`).join('')}</ol><details class="source-note"><summary>About the story & original sources</summary><p>${esc(manifest.sourceNote)}</p><p>Each short overlay preserves the manuscript wording and uses the Lightroom media of the caption it draws from. Connecting prose remains editorial interpretation. Open Source to see every supporting caption.</p><p>The optional reflection exercises are new editorial invitations, separate from the narrative and original captions.</p><a href="/journey/sources.json" download="a-year-of-becoming-original-captions.json">All 199 original reel captions ↓</a></details></section>`;
  }
- function mediaPanel(item){
-  const record=library.find(r=>r.id===item.contentId),m=record?.media[item.assetIndex||0];if(!m)return '';
-  const source=m.media_url,preview=m.preview_url||m.thumbnail_url||source;
-  return `<section class="panel media-panel"><p class="eyebrow">From the archive · ${esc(record.format)}${item.sourceReel?` ${String(item.sourceReel).padStart(3,'0')}`:''}</p>${m.kind==='video'?`<video controls playsinline preload="none" poster="${esc(preview)}" src="${esc(source)}" aria-label="Companion ${esc(record.format)}"></video>`:`<img loading="lazy" src="${esc(preview)}" alt="${esc(item.alt||'Companion image from the chapter’s source archive')}">`}${item.note?`<p class="quiet">${esc(item.note)}</p>`:''}<details><summary>Read the original caption</summary><p>${esc(record.caption)}</p><a href="/?asset=${encodeURIComponent(record.id)}">Open in the library ↗</a></details></section>`;
+ function sourceMedia(source,sourceIndex){
+  const r=record(source.contentId),m=r.media[source.assetIndex];
+  return `<div class="scene-media" data-source-index="${sourceIndex}" ${sourceIndex?'hidden':''}><div class="media-backdrop" aria-hidden="true"><img src="${esc(preview(m))}" alt="" loading="lazy"></div>${m.kind==='video'?`<video class="original-media" playsinline muted loop preload="none" poster="${esc(preview(m))}" src="${esc(m.media_url)}" aria-label="Original ${esc(r.format)} media"></video>`:`<img class="original-media" src="${esc(preview(m))}" alt="${esc(source.alt||'Original image accompanying the source caption')}" loading="lazy">`}<p class="media-error" hidden>Media couldn’t load. <a href="/?asset=${encodeURIComponent(r.id)}">Open the original ↗</a></p></div>`;
  }
- function reflectionPanel(chapter,saved){
-  return `<section class="panel reflection-panel"><p class="eyebrow">Your turn · Always optional</p><h2>Pause here.</h2><p class="quiet">A question. A little space. One small step.</p><div class="prompt-tabs" role="group" aria-label="Reflection prompts">${chapter.reflections.map((p,n)=>`<button data-prompt="${n}" class="secondary" aria-pressed="${n===0}">${esc(p.kind)}</button>`).join('')}</div>${chapter.reflections.map((p,n)=>`<div data-exercise="${n}" ${n?'hidden':''}><label for="reflection-${n}" class="prompt-text">${esc(p.prompt)}</label><textarea id="reflection-${n}" data-answer="${n}" maxlength="20000" placeholder="Just for you…">${esc(saved.answers?.[n]||(n===0?saved.reflection||'':''))}</textarea></div>`).join('')}<p id="reflection-status" class="quiet" role="status">Your words stay in this browser.</p><button class="secondary" id="complete" aria-pressed="${!!saved.complete}">${saved.complete?'Chapter read ✓':'Mark chapter as read'}</button></section>`;
+ function scenePanel(scene,index){
+  return `<section class="scene" data-scene="${esc(scene.id)}" aria-label="Passage ${scene.passageIndex+1}, moment ${index+1}">${scene.sources.map(sourceMedia).join('')}<div class="scene-shade" aria-hidden="true"></div><div class="scene-copy"><button class="source-link" data-open-source="${index}">Source · ${esc(record(scene.sources[0].contentId).format)}${scene.sources.length>1?` + ${scene.sources.length-1}`:''} ↗</button><p>${esc(scene.text)}</p></div></section>`;
+ }
+ function reflectionMarkup(chapter,saved){
+  return `<p class="eyebrow">Your turn · Always optional</p><h2>Pause here.</h2><div class="prompt-tabs" role="group" aria-label="Reflection prompts">${chapter.reflections.map((p,n)=>`<button data-prompt="${n}" aria-pressed="${n===0}">${esc(p.kind)}</button>`).join('')}</div>${chapter.reflections.map((p,n)=>`<div data-exercise="${n}" ${n?'hidden':''}><label for="reflection-${n}" class="prompt-text">${esc(p.prompt)}</label><textarea id="reflection-${n}" data-answer="${n}" maxlength="20000" placeholder="Just for you…">${esc(saved.answers?.[n]||(n===0?saved.reflection||'':''))}</textarea></div>`).join('')}<p id="reflection-status" class="quiet" role="status">Your words stay in this browser.</p><button class="secondary" id="complete" aria-pressed="${!!saved.complete}">${saved.complete?'Chapter read ✓':'Mark chapter as read'}</button>`;
  }
  async function render(){
-  const version=++generation;cleanup();panels=null;
-  const id=new URLSearchParams(location.search).get('chapter'),entry=manifest.chapters.find(c=>c.id===id);
+  const version=++generation;cleanup();panels=null;sourceIndices={};
+  const params=new URLSearchParams(location.search),id=params.get('chapter'),entry=manifest.chapters.find(c=>c.id===id);
   if(!id){landing();return;}
-  if(!entry){main.innerHTML='<p class="notice">This chapter is unavailable.</p><a href="/journey/">Return to the journey</a>';return;}
-  main.innerHTML='<p class="notice">Opening this chapter…</p>';
-  try {
+  if(!entry){document.body.classList.remove('reading');main.innerHTML='<p class="notice">This chapter is unavailable.</p><a href="/journey/">Return to the journey</a>';return;}
+  document.body.classList.add('reading');main.innerHTML='<p class="notice">Opening this chapter…</p>';
+  try{
    const chapter=await get(`/journey/chapters/${encodeURIComponent(entry.id)}.json`);if(version!==generation)return;
-   const i=manifest.chapters.indexOf(entry),saved=state.chapters[id]||{};
-   main.innerHTML=`<div class="reader-top"><a href="/journey/">← The journey</a><select aria-label="Choose a chapter">${manifest.chapters.map((c,n)=>`<option value="${esc(c.id)}" ${c.id===id?'selected':''}>${String(n+1).padStart(2,'0')} · ${esc(c.title)}</option>`).join('')}</select></div><div class="chapter-meta"><span>Chapter ${String(i+1).padStart(2,'0')} / 24</span><span>${esc(chapter.period)}</span></div><div id="panels" tabindex="0" aria-label="Chapter reading panels. Swipe or use previous and next.">${chapter.passages.map((p,n)=>`<section class="panel story-panel">${n===0?`<h2>${esc(chapter.title)}</h2>`:'<p class="eyebrow">A year of becoming</p>'}<p>${esc(p)}</p></section>`).join('')}${(chapter.media||[]).map(mediaPanel).join('')}${reflectionPanel(chapter,saved)}</div><div class="reader-controls"><button id="previous" aria-label="Previous reading panel">← Back</button><span id="position" role="status"></span><button id="next" aria-label="Next reading panel">Next →</button></div><nav class="end-nav" aria-label="Chapter navigation">${i?`<a href="${url(manifest.chapters[i-1].id)}">← Previous chapter</a>`:'<a href="/journey/">All chapters</a>'}<button id="pause-link">Pause & reflect</button>${i<manifest.chapters.length-1?`<a href="${url(manifest.chapters[i+1].id)}">Next chapter →</a>`:'<a href="/journey/">Return to the journey →</a>'}</nav>`;
+   const chapterIndex=manifest.chapters.indexOf(entry),saved=state.chapters[id]||{},scenes=chapter.scenes;
+   main.innerHTML=`<div class="reader-shell"><div id="panels" tabindex="0" aria-label="Swipe to read the story">${scenes.map(scenePanel).join('')}</div><div class="reader-progress" aria-hidden="true"><span id="progress-fill"></span></div><nav class="reader-top" aria-label="Journey navigation"><a href="/journey/" aria-label="All chapters">←</a><button id="chapter-picker" aria-label="Choose a chapter"><small>${String(chapterIndex+1).padStart(2,'0')} / ${manifest.chapters.length}</small><h1>${esc(chapter.title)}</h1></button><button id="reflect" aria-label="Open reflection exercises">✧</button></nav><div class="playback-controls"><button id="play" aria-label="Pause video">Ⅱ</button><button id="sound" aria-label="Turn sound on" aria-pressed="false">Sound off</button></div><nav class="reader-controls" aria-label="Reading controls"><button id="previous" aria-label="Previous moment">←</button><span id="position" role="status"></span><button id="text-toggle" aria-label="Hide story text" aria-pressed="${textVisible}">Aa</button><button id="next" aria-label="Next moment">→</button></nav><div id="chapter-end" hidden><button id="end-reflect">Pause & reflect</button>${chapterIndex<manifest.chapters.length-1?`<a href="${url(manifest.chapters[chapterIndex+1].id)}">Next chapter ↗</a>`:'<a href="/journey/">The journey ↗</a>'}</div></div><dialog class="journey-sheet" id="source-sheet" aria-label="Original source"><button class="close-sheet" aria-label="Close source">×</button><div id="source-body"></div></dialog><dialog class="journey-sheet" id="reflection-sheet" aria-label="Chapter reflections"><button class="close-sheet" aria-label="Close reflections">×</button>${reflectionMarkup(chapter,saved)}</dialog><dialog class="journey-sheet" id="chapters-sheet" aria-label="Choose a chapter"><button class="close-sheet" aria-label="Close chapter navigation">×</button><p class="eyebrow">A year of becoming</p><ol class="sheet-chapters">${manifest.chapters.map((c,n)=>`<li><a href="${url(c.id)}" ${c.id===id?'aria-current="page"':''}><small>${String(n+1).padStart(2,'0')}</small>${esc(c.title)}</a></li>`).join('')}</ol></dialog>`;
    state.chapters[id]={...saved};state.last=id;
    panels=document.querySelector('#panels');const rail=panels;
-   const requested=Number(new URLSearchParams(location.search).get('panel')||0);
-   active=Number.isFinite(requested)?Math.max(0,Math.min(rail.children.length-1,Math.floor(requested))):0;
-   let timer;
-   const update=()=>{
-    if(version!==generation||rail.clientWidth<=0)return;
-    active=Math.max(0,Math.min(rail.children.length-1,Math.round(rail.scrollLeft/rail.clientWidth)));
-    state.chapters[id].panel=active;save();history.replaceState({},'',url(id,active));
-    document.querySelector('#position').textContent=`${active+1} / ${rail.children.length}`;
-    document.querySelector('#previous').disabled=active===0;document.querySelector('#next').disabled=active===rail.children.length-1;
-    [...rail.children].forEach((panel,n)=>{panel.inert=n!==active;panel.setAttribute('aria-hidden',String(n!==active));if(n!==active)panel.querySelectorAll('video').forEach(v=>v.pause());});
+   const requestedId=params.get('scene'),oldPanel=Number(params.get('panel')||0);
+   active=requestedId?scenes.findIndex(s=>s.id===requestedId):params.has('panel')?scenes.findIndex(s=>s.passageIndex===oldPanel):0;
+   active=Math.max(0,active);
+   let timer,resizeFrame,pausedByUser=false;
+   const sheets=[...main.querySelectorAll('dialog')];
+   const currentMedia=()=>rail.children[active]?.querySelector(`.scene-media[data-source-index="${sourceIndices[active]||0}"]`);
+   const currentVideo=()=>currentMedia()?.querySelector('video');
+   const syncPlayback=()=>{
+    if(version!==generation)return;
+    const video=currentVideo(),blocked=sheets.some(s=>s.open)||document.hidden;
+    rail.querySelectorAll('video').forEach(v=>{if(v!==video||blocked)v.pause();});
+    document.querySelector('.playback-controls').hidden=!video;
+    if(video){video.muted=!sound;document.querySelector('#play').textContent=video.paused?'▶':'Ⅱ';document.querySelector('#play').setAttribute('aria-label',video.paused?'Play video':'Pause video');document.querySelector('#sound').textContent=sound?'Sound on':'Sound off';document.querySelector('#sound').setAttribute('aria-pressed',String(sound));document.querySelector('#sound').setAttribute('aria-label',sound?'Turn sound off':'Turn sound on');}
    };
-   const moveTo=n=>{const target=Math.max(0,Math.min(rail.children.length-1,n));rail.scrollTo({left:target*rail.clientWidth,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});};
-   rail.scrollLeft=active*rail.clientWidth;update();
-   rail.addEventListener('scroll',()=>{clearTimeout(timer);timer=setTimeout(update,120);},{passive:true});
-   document.querySelector('#previous').onclick=()=>moveTo(active-1);document.querySelector('#next').onclick=()=>moveTo(active+1);
-   document.querySelector('#pause-link').onclick=()=>moveTo(rail.children.length-1);
-   rail.onkeydown=e=>{if(e.target!==rail)return;if(['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();moveTo(active+(e.key==='ArrowRight'?1:-1));}};
-   document.querySelector('select').onchange=e=>go(e.target.value);
-   document.querySelectorAll('[data-prompt]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-prompt]').forEach(t=>t.setAttribute('aria-pressed',String(t===b)));document.querySelectorAll('[data-exercise]').forEach(p=>p.hidden=p.dataset.exercise!==b.dataset.prompt);});
+   function startVideo(){
+    if(version!==generation)return;
+    syncPlayback();const video=currentVideo();
+    if(video&&!pausedByUser&&!sheets.some(s=>s.open)&&!document.hidden&&!matchMedia('(prefers-reduced-motion: reduce)').matches)video.play().then(()=>{if(version===generation)syncPlayback();}).catch(()=>syncPlayback());
+   }
+   function update(){
+    if(version!==generation||rail.clientWidth<=0)return;
+    const next=Math.max(0,Math.min(scenes.length-1,Math.round(rail.scrollLeft/rail.clientWidth))),changed=next!==active;
+    active=next;const scene=scenes[active];
+    state.chapters[id].sceneId=scene.id;state.chapters[id].panel=active;save();history.replaceState({},'',url(id,scene.id));
+    document.querySelector('#position').textContent=`${active+1} / ${scenes.length}`;
+    document.querySelector('#progress-fill').style.width=`${(active+1)/scenes.length*100}%`;
+    document.querySelector('#previous').disabled=active===0&&chapterIndex===0;
+    document.querySelector('#next').disabled=active===scenes.length-1&&chapterIndex===manifest.chapters.length-1;
+    document.querySelector('#chapter-end').hidden=active!==scenes.length-1;
+    rail.classList.toggle('text-hidden',!textVisible);
+    [...rail.children].forEach((panel,n)=>{panel.inert=n!==active;panel.setAttribute('aria-hidden',String(n!==active));});
+    if(changed){pausedByUser=false;startVideo();}else syncPlayback();
+   }
+   function move(delta){
+    const target=active+delta;
+    if(target<0&&chapterIndex>0){go(manifest.chapters[chapterIndex-1].id);return;}
+    if(target>=scenes.length&&chapterIndex<manifest.chapters.length-1){go(manifest.chapters[chapterIndex+1].id);return;}
+    rail.scrollTo({left:Math.max(0,Math.min(scenes.length-1,target))*rail.clientWidth,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+   }
+   function showSheet(sheet){sheet.showModal();syncPlayback();}
+   sheets.forEach(sheet=>{sheet.querySelector('.close-sheet').onclick=()=>sheet.close();sheet.addEventListener('close',startVideo);sheet.addEventListener('click',e=>{if(e.target===sheet){const r=sheet.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)sheet.close();}});});
+   function showSource(index){
+    const scene=scenes[index],selected=sourceIndices[index]||0,source=scene.sources[selected],r=record(source.contentId),date=r.date?new Date(r.date).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}):'';
+    document.querySelector('#source-body').innerHTML=`<p class="eyebrow">${esc(r.format)} · ${esc(date)}</p><h2>The original.</h2>${scene.sources.length>1?`<p class="quiet">This moment draws on ${scene.sources.length} source captions. Choose one to see its media.</p><div class="source-options">${scene.sources.map((s,n)=>`<button data-source-choice="${n}" aria-pressed="${n===selected}"><img src="${esc(cover(s.contentId))}" alt="" loading="lazy"><span>Reel ${String(s.sourceReel).padStart(3,'0')}</span></button>`).join('')}</div>`:''}<p class="quiet">${esc(scene.attribution)}.</p><p class="original-caption">${esc(r.caption)}</p><a href="/?asset=${encodeURIComponent(r.id)}">Open the original in the library ↗</a><details><summary>Full manuscript passage</summary><p class="manuscript-passage">${esc(chapter.passages[scene.passageIndex])}</p></details>`;
+    document.querySelectorAll('[data-source-choice]').forEach(button=>button.onclick=()=>{sourceIndices[index]=Number(button.dataset.sourceChoice);rail.children[index].querySelectorAll('.scene-media').forEach(media=>{media.hidden=Number(media.dataset.sourceIndex)!==sourceIndices[index];});showSource(index);});
+    const sheet=document.querySelector('#source-sheet');if(!sheet.open)showSheet(sheet);else syncPlayback();
+   }
+   rail.scrollLeft=active*rail.clientWidth;update();startVideo();
+   rail.addEventListener('scroll',()=>{clearTimeout(timer);timer=setTimeout(update,110);},{passive:true});
+   document.querySelector('#previous').onclick=()=>move(-1);document.querySelector('#next').onclick=()=>move(1);
+   rail.onkeydown=e=>{if(e.target!==rail)return;if(['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();move(e.key==='ArrowRight'?1:-1);}};
+   document.querySelectorAll('[data-open-source]').forEach(button=>button.onclick=()=>showSource(Number(button.dataset.openSource)));
+   document.querySelector('#chapter-picker').onclick=()=>showSheet(document.querySelector('#chapters-sheet'));
+   const reflect=()=>showSheet(document.querySelector('#reflection-sheet'));
+   document.querySelector('#reflect').onclick=reflect;document.querySelector('#end-reflect').onclick=reflect;
+   document.querySelector('#text-toggle').onclick=e=>{textVisible=!textVisible;rail.classList.toggle('text-hidden',!textVisible);e.currentTarget.setAttribute('aria-pressed',String(textVisible));e.currentTarget.setAttribute('aria-label',textVisible?'Hide story text':'Show story text');};
+   document.querySelector('#play').onclick=()=>{const video=currentVideo();if(video){if(video.paused){pausedByUser=false;video.play().then(syncPlayback).catch(syncPlayback);}else{pausedByUser=true;video.pause();}}};
+   document.querySelector('#sound').onclick=()=>{sound=!sound;syncPlayback();};
+   rail.querySelectorAll('video').forEach(video=>{video.addEventListener('play',syncPlayback);video.addEventListener('pause',syncPlayback);video.addEventListener('error',()=>{video.parentElement.querySelector('.media-error').hidden=false;});});
+   document.querySelectorAll('[data-prompt]').forEach(button=>button.onclick=()=>{document.querySelectorAll('[data-prompt]').forEach(t=>t.setAttribute('aria-pressed',String(t===button)));document.querySelectorAll('[data-exercise]').forEach(p=>p.hidden=p.dataset.exercise!==button.dataset.prompt);});
    document.querySelectorAll('[data-answer]').forEach(t=>t.oninput=()=>{state.chapters[id].answers??={};state.chapters[id].answers[t.dataset.answer]=t.value;document.querySelector('#reflection-status').textContent=save()?'Saved in this browser.':'Unable to save. Keep a copy before leaving.';});
-   document.querySelector('#complete').onclick=e=>{state.chapters[id].complete=!state.chapters[id].complete;save();e.target.setAttribute('aria-pressed',String(state.chapters[id].complete));e.target.textContent=state.chapters[id].complete?'Chapter read ✓':'Mark chapter as read';};
-   cleanup=()=>{clearTimeout(timer);rail.querySelectorAll('video').forEach(v=>v.pause());};
-  } catch(e){if(version===generation)main.innerHTML=`<p class="notice">${esc(e.message)}</p><a href="/journey/">Return to the journey</a>`;}
+   document.querySelector('#complete').onclick=e=>{state.chapters[id].complete=!state.chapters[id].complete;save();e.currentTarget.setAttribute('aria-pressed',String(state.chapters[id].complete));e.currentTarget.textContent=state.chapters[id].complete?'Chapter read ✓':'Mark chapter as read';};
+   const resize=()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(()=>{if(rail.clientWidth>0)rail.scrollLeft=active*rail.clientWidth;});};
+   const visibility=()=>{if(document.hidden)syncPlayback();else startVideo();};window.addEventListener('resize',resize);document.addEventListener('visibilitychange',visibility);
+   cleanup=()=>{clearTimeout(timer);cancelAnimationFrame(resizeFrame);rail.querySelectorAll('video').forEach(v=>v.pause());window.removeEventListener('resize',resize);document.removeEventListener('visibilitychange',visibility);};
+  }catch(e){if(version===generation){document.body.classList.remove('reading');main.innerHTML=`<p class="notice">${esc(e.message)}</p><a href="/journey/">Return to the journey</a>`;}}
  }
  window.addEventListener('popstate',()=>manifest&&render());
- window.addEventListener('resize',()=>{if(panels?.isConnected&&panels.clientWidth>0)panels.scrollLeft=active*panels.clientWidth;});
- Promise.all([get('/journey/chapters/index.json'),get('/library.json')]).then(([m,l])=>{manifest=m;library=Array.isArray(l)?l:l.items;return render();}).catch(()=>{main.innerHTML='<p class="notice">The journey could not be opened. Please try again.</p>';});
+ Promise.all([get('/journey/chapters/index.json'),get('/library.json')]).then(([m,l])=>{manifest=m;library=Array.isArray(l)?l:l.items;return render();}).catch(()=>{document.body.classList.remove('reading');main.innerHTML='<p class="notice">The journey could not be opened. Please try again.</p>';});
 })();

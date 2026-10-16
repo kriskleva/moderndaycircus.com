@@ -7,18 +7,6 @@
     "The early mornings became a place I could return to. Sound before the noise of the day. Movement before everyone else's demands. Heat, quiet, and a little time to notice how I felt.",
     "I started describing self-care as something I had to schedule. Responsibilities were always going to fill the available space. If I wanted a life with energy left for creativity and connection, I needed to make room for myself inside it. The ritual began before sunrise."
   ],
-  "media": [
-    {
-      "contentId": "mdc-707ed31678260230fed3",
-      "assetIndex": 0,
-      "sourceReel": 8
-    },
-    {
-      "contentId": "mdc-d1c42e7e53da5b1de045",
-      "assetIndex": 0,
-      "sourceReel": 10
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -33,5 +21,85 @@
       "prompt": "Put those ten minutes on your calendar. Make the appointment small enough to keep."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "The early mornings became a place I could return to.",
+      "sources": [
+        {
+          "contentId": "mdc-d1c42e7e53da5b1de045",
+          "assetIndex": 0,
+          "sourceReel": 10
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p1-s2",
+      "passageIndex": 0,
+      "text": "Sound before the noise of the day.",
+      "sources": [
+        {
+          "contentId": "mdc-707ed31678260230fed3",
+          "assetIndex": 0,
+          "sourceReel": 8
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p1-s3",
+      "passageIndex": 0,
+      "text": "Movement before everyone else's demands.",
+      "sources": [
+        {
+          "contentId": "mdc-d1c42e7e53da5b1de045",
+          "assetIndex": 0,
+          "sourceReel": 10
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p1-s4",
+      "passageIndex": 0,
+      "text": "Heat, quiet, and a little time to notice how I felt.",
+      "sources": [
+        {
+          "contentId": "mdc-69a677d7993b2ea31621",
+          "assetIndex": 0,
+          "sourceReel": 11
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "I started describing self-care as something I had to schedule. Responsibilities were always going to fill the available space.",
+      "sources": [
+        {
+          "contentId": "mdc-d1c42e7e53da5b1de045",
+          "assetIndex": 0,
+          "sourceReel": 10
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s3",
+      "passageIndex": 1,
+      "text": "If I wanted a life with energy left for creativity and connection, I needed to make room for myself inside it. The ritual began before sunrise.",
+      "sources": [
+        {
+          "contentId": "mdc-d1c42e7e53da5b1de045",
+          "assetIndex": 0,
+          "sourceReel": 10
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    }
+  ]
 }

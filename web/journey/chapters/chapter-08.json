@@ -7,18 +7,6 @@
     "Some days I missed the goal. Some days I needed rest. Household chores and storm cleanup still happened. The ordinary logistics of life kept interrupting the transformation montage.",
     "I began learning how to adjust without treating every adjustment as defeat. A smaller practice could still count. Guidance from a friend could help. Mobility mattered. Preparation mattered. The handstand was becoming a lesson in how to continue a life, including the days that never looked impressive on camera."
   ],
-  "media": [
-    {
-      "contentId": "mdc-5e5c617fded65847302e",
-      "assetIndex": 0,
-      "sourceReel": 30
-    },
-    {
-      "contentId": "mdc-f81b071cd00de05774bd",
-      "assetIndex": 0,
-      "sourceReel": 48
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -33,5 +21,124 @@
       "prompt": "Try the smaller promise once. Notice whether it leaves you more willing to return."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "Some days I missed the goal.",
+      "sources": [
+        {
+          "contentId": "mdc-f81b071cd00de05774bd",
+          "assetIndex": 0,
+          "sourceReel": 48
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p1-s2",
+      "passageIndex": 0,
+      "text": "Some days I needed rest.",
+      "sources": [
+        {
+          "contentId": "mdc-5e5c617fded65847302e",
+          "assetIndex": 0,
+          "sourceReel": 30
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p1-s3",
+      "passageIndex": 0,
+      "text": "Household chores and storm cleanup still happened. The ordinary logistics of life kept interrupting the transformation montage.",
+      "sources": [
+        {
+          "contentId": "mdc-f81b071cd00de05774bd",
+          "assetIndex": 0,
+          "sourceReel": 48
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "I began learning how to adjust without treating every adjustment as defeat.",
+      "sources": [
+        {
+          "contentId": "mdc-f81b071cd00de05774bd",
+          "assetIndex": 0,
+          "sourceReel": 48
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s2",
+      "passageIndex": 1,
+      "text": "A smaller practice could still count.",
+      "sources": [
+        {
+          "contentId": "mdc-25d90bbf9f12ded0ed2a",
+          "assetIndex": 0,
+          "sourceReel": 36
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s3",
+      "passageIndex": 1,
+      "text": "Guidance from a friend could help.",
+      "sources": [
+        {
+          "contentId": "mdc-5e5c617fded65847302e",
+          "assetIndex": 0,
+          "sourceReel": 30
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s4",
+      "passageIndex": 1,
+      "text": "Mobility mattered.",
+      "sources": [
+        {
+          "contentId": "mdc-7dfce31c1a1c457a059e",
+          "assetIndex": 0,
+          "sourceReel": 39
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s5",
+      "passageIndex": 1,
+      "text": "Preparation mattered.",
+      "sources": [
+        {
+          "contentId": "mdc-127e5f781ea03fb5d119",
+          "assetIndex": 0,
+          "sourceReel": 45
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s6",
+      "passageIndex": 1,
+      "text": "The handstand was becoming a lesson in how to continue a life, including the days that never looked impressive on camera.",
+      "sources": [
+        {
+          "contentId": "mdc-f81b071cd00de05774bd",
+          "assetIndex": 0,
+          "sourceReel": 48
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    }
+  ]
 }

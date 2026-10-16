@@ -7,13 +7,6 @@
     "My technical brain already understood iteration. Build something. Learn where it breaks. Refactor. Try again. I began using the same language for my life.",
     "Failure could become information. Repair could become an action. I didn't need to pretend every disappointment had been useful or fair. I needed a way to respond that left me able to keep going. I started imagining the next version of myself as someone I could build through practice."
   ],
-  "media": [
-    {
-      "contentId": "mdc-2cc81901e4dcd6d7d507",
-      "assetIndex": 0,
-      "sourceReel": 12
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -28,5 +21,46 @@
       "prompt": "Choose one repair you can begin in ten minutes. Take the first step and note what happened."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "My technical brain already understood iteration. Build something. Learn where it breaks. Refactor. Try again. I began using the same language for my life.",
+      "sources": [
+        {
+          "contentId": "mdc-2cc81901e4dcd6d7d507",
+          "assetIndex": 0,
+          "sourceReel": 12
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "Failure could become information. Repair could become an action. I didn't need to pretend every disappointment had been useful or fair. I needed a way to respond that left me able to keep going.",
+      "sources": [
+        {
+          "contentId": "mdc-2cc81901e4dcd6d7d507",
+          "assetIndex": 0,
+          "sourceReel": 12
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s5",
+      "passageIndex": 1,
+      "text": "I started imagining the next version of myself as someone I could build through practice.",
+      "sources": [
+        {
+          "contentId": "mdc-2cc81901e4dcd6d7d507",
+          "assetIndex": 0,
+          "sourceReel": 12
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    }
+  ]
 }

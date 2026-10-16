@@ -7,18 +7,6 @@
     "One of the earliest scenes is me trying a machine at the gym, laughing because I don't really know if I'm doing it right. That matters to the story. Before the big declarations, before the runway and the new skills, there was someone willing to look a little ridiculous and enjoy himself anyway.",
     "Then December brought the harder question: how much longer was I willing to live inside a version of myself I had already outgrown? I wanted a different life. I was beginning to understand that wanting it would have to become something I practiced."
   ],
-  "media": [
-    {
-      "contentId": "mdc-9f9ead5df7f67556f771",
-      "assetIndex": 0,
-      "sourceReel": 1
-    },
-    {
-      "contentId": "mdc-b2010f426d95c7dcb707",
-      "assetIndex": 0,
-      "sourceReel": 2
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -33,5 +21,59 @@
       "prompt": "Take five minutes to try the thing you named. Record one thing you noticed, without rating your performance."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "One of the earliest scenes is me trying a machine at the gym, laughing because I don't really know if I'm doing it right. That matters to the story.",
+      "sources": [
+        {
+          "contentId": "mdc-9f9ead5df7f67556f771",
+          "assetIndex": 0,
+          "sourceReel": 1
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p1-s3",
+      "passageIndex": 0,
+      "text": "Before the big declarations, before the runway and the new skills, there was someone willing to look a little ridiculous and enjoy himself anyway.",
+      "sources": [
+        {
+          "contentId": "mdc-9f9ead5df7f67556f771",
+          "assetIndex": 0,
+          "sourceReel": 1
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "Then December brought the harder question: how much longer was I willing to live inside a version of myself I had already outgrown? I wanted a different life.",
+      "sources": [
+        {
+          "contentId": "mdc-b2010f426d95c7dcb707",
+          "assetIndex": 0,
+          "sourceReel": 2
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s3",
+      "passageIndex": 1,
+      "text": "I was beginning to understand that wanting it would have to become something I practiced.",
+      "sources": [
+        {
+          "contentId": "mdc-b2010f426d95c7dcb707",
+          "assetIndex": 0,
+          "sourceReel": 2
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    }
+  ]
 }

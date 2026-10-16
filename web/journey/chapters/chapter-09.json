@@ -7,18 +7,6 @@
     "Around the new year, I talked about Portland, community, and the work of helping artists gain access to space and opportunity. My career had brought me to Maine. The people had given me reasons to keep building here.",
     "Equal Measure Arts and The Square belonged in this story because creativity needed more than individual confidence. It needed places to happen. People needed ways to find each other, exchange skills, and make things together. I wanted to help build those connections."
   ],
-  "media": [
-    {
-      "contentId": "mdc-7a8039f57c2a2185db8e",
-      "assetIndex": 0,
-      "sourceReel": 28
-    },
-    {
-      "contentId": "mdc-4c5767d554cd946b1dac",
-      "assetIndex": 0,
-      "sourceReel": 29
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -33,5 +21,59 @@
       "prompt": "Write a short thank-you to someone who makes room for your creativity. Decide whether you want to share it."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "Around the new year, I talked about Portland, community, and the work of helping artists gain access to space and opportunity. My career had brought me to Maine.",
+      "sources": [
+        {
+          "contentId": "mdc-4c5767d554cd946b1dac",
+          "assetIndex": 0,
+          "sourceReel": 29
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p1-s3",
+      "passageIndex": 0,
+      "text": "The people had given me reasons to keep building here.",
+      "sources": [
+        {
+          "contentId": "mdc-4c5767d554cd946b1dac",
+          "assetIndex": 0,
+          "sourceReel": 29
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "Equal Measure Arts and The Square belonged in this story because creativity needed more than individual confidence. It needed places to happen.",
+      "sources": [
+        {
+          "contentId": "mdc-4c5767d554cd946b1dac",
+          "assetIndex": 0,
+          "sourceReel": 29
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s3",
+      "passageIndex": 1,
+      "text": "People needed ways to find each other, exchange skills, and make things together. I wanted to help build those connections.",
+      "sources": [
+        {
+          "contentId": "mdc-4c5767d554cd946b1dac",
+          "assetIndex": 0,
+          "sourceReel": 29
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    }
+  ]
 }

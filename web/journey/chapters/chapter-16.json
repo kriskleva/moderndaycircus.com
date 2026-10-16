@@ -7,18 +7,6 @@
     "A trip into the wilderness. Long hours in my own head. A new pair of gold scissors. A sewing machine. The work was changing shape again.",
     "Sewing gave me another place to practice patience and solve problems with my hands. I made pieces for myself and the squad, with mentors willing to help me learn. Fabric offered a tangible answer to an emotional question: what do I want to make of this time, this energy, this version of myself?"
   ],
-  "media": [
-    {
-      "contentId": "mdc-cc4944867b0b5e07f52f",
-      "assetIndex": 0,
-      "sourceReel": 83
-    },
-    {
-      "contentId": "mdc-631d2bb12234c60a4269",
-      "assetIndex": 0,
-      "sourceReel": 89
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -33,5 +21,51 @@
       "prompt": "Gather one material or tool for your project. Try a small sample before tackling the whole thing."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "A trip into the wilderness. Long hours in my own head. A new pair of gold scissors. A sewing machine. The work was changing shape again.",
+      "sources": [
+        {
+          "contentId": "mdc-cc4944867b0b5e07f52f",
+          "assetIndex": 0,
+          "sourceReel": 83
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "Sewing gave me another place to practice patience and solve problems with my hands. I made pieces for myself and the squad, with mentors willing to help me learn.",
+      "sources": [
+        {
+          "contentId": "mdc-631d2bb12234c60a4269",
+          "assetIndex": 0,
+          "sourceReel": 89
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s3",
+      "passageIndex": 1,
+      "text": "Fabric offered a tangible answer to an emotional question: what do I want to make of this time, this energy, this version of myself?",
+      "sources": [
+        {
+          "contentId": "mdc-cc4944867b0b5e07f52f",
+          "assetIndex": 0,
+          "sourceReel": 83
+        },
+        {
+          "contentId": "mdc-631d2bb12234c60a4269",
+          "assetIndex": 0,
+          "sourceReel": 89
+        }
+      ],
+      "attribution": "Editorial synthesis of these captions"
+    }
+  ]
 }

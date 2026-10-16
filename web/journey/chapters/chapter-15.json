@@ -7,18 +7,6 @@
     "Runway appealed to the maker in me. Tiny adjustments changed the whole experience: the shoulders, the timing, the tension, the release. Presence could be practiced with the same attention I brought to other kinds of design.",
     "The shows also revealed how much happened before the walk. Training, stretching, self-doubt, mirrors, and repetition. Backstage, artists worked with fabric, makeup, accessories, and encouragement. The finished moment belonged to a whole room of people. I loved being part of that room."
   ],
-  "media": [
-    {
-      "contentId": "mdc-1044c30284484999f2d2",
-      "assetIndex": 0,
-      "sourceReel": 78
-    },
-    {
-      "contentId": "mdc-4851374ca94727100ccb",
-      "assetIndex": 0,
-      "sourceReel": 82
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -33,5 +21,59 @@
       "prompt": "Practice the tiny adjustment once. Describe the difference in plain words."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "Runway appealed to the maker in me. Tiny adjustments changed the whole experience: the shoulders, the timing, the tension, the release.",
+      "sources": [
+        {
+          "contentId": "mdc-1044c30284484999f2d2",
+          "assetIndex": 0,
+          "sourceReel": 78
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p1-s3",
+      "passageIndex": 0,
+      "text": "Presence could be practiced with the same attention I brought to other kinds of design.",
+      "sources": [
+        {
+          "contentId": "mdc-1044c30284484999f2d2",
+          "assetIndex": 0,
+          "sourceReel": 78
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "The shows also revealed how much happened before the walk. Training, stretching, self-doubt, mirrors, and repetition. Backstage, artists worked with fabric, makeup, accessories, and encouragement.",
+      "sources": [
+        {
+          "contentId": "mdc-4851374ca94727100ccb",
+          "assetIndex": 0,
+          "sourceReel": 82
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s4",
+      "passageIndex": 1,
+      "text": "The finished moment belonged to a whole room of people. I loved being part of that room.",
+      "sources": [
+        {
+          "contentId": "mdc-4851374ca94727100ccb",
+          "assetIndex": 0,
+          "sourceReel": 82
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    }
+  ]
 }

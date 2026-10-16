@@ -7,13 +7,6 @@
     "My relationship reflections were becoming more specific. I wanted to understand what closeness meant to another person. What helped them feel safe. What made a difficult conversation possible.",
     "I also wanted to notice whether that curiosity came back toward me. Could I be myself here? Were we choosing each other? Understanding someone else's experience didn't have to require losing track of my own. I was trying to make room for love and self-respect in the same conversation."
   ],
-  "media": [
-    {
-      "contentId": "mdc-50cea228a592b26f9ba9",
-      "assetIndex": 0,
-      "sourceReel": 95
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -28,5 +21,46 @@
       "prompt": "Choose a calm moment to ask your question, if you want to. Leave room to listen and to express your own needs."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "My relationship reflections were becoming more specific. I wanted to understand what closeness meant to another person. What helped them feel safe. What made a difficult conversation possible.",
+      "sources": [
+        {
+          "contentId": "mdc-50cea228a592b26f9ba9",
+          "assetIndex": 0,
+          "sourceReel": 95
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "I also wanted to notice whether that curiosity came back toward me. Could I be myself here? Were we choosing each other?",
+      "sources": [
+        {
+          "contentId": "mdc-50cea228a592b26f9ba9",
+          "assetIndex": 0,
+          "sourceReel": 95
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s4",
+      "passageIndex": 1,
+      "text": "Understanding someone else's experience didn't have to require losing track of my own. I was trying to make room for love and self-respect in the same conversation.",
+      "sources": [
+        {
+          "contentId": "mdc-50cea228a592b26f9ba9",
+          "assetIndex": 0,
+          "sourceReel": 95
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    }
+  ]
 }

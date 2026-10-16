@@ -7,13 +7,6 @@
     "I had spent years helping fashion and retail work through technology: APIs, platforms, payments, integrations. Then I began studying the experience from inside my own body.",
     "Posture. Movement. A dip. A walk. Lessons with people who understood the craft and its history. I was learning a new language in public. The curiosity felt familiar, even when the movement didn't. After years of supporting experiences behind the scenes, I was giving myself permission to enter the scene."
   ],
-  "media": [
-    {
-      "contentId": "mdc-5bca2753c0d5bc8d725f",
-      "assetIndex": 0,
-      "sourceReel": 47
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -28,5 +21,46 @@
       "prompt": "Choose one low-pressure opportunity to take part. Put a first step on your calendar."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "I had spent years helping fashion and retail work through technology: APIs, platforms, payments, integrations. Then I began studying the experience from inside my own body.",
+      "sources": [
+        {
+          "contentId": "mdc-5bca2753c0d5bc8d725f",
+          "assetIndex": 0,
+          "sourceReel": 47
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "Posture. Movement. A dip. A walk. Lessons with people who understood the craft and its history. I was learning a new language in public. The curiosity felt familiar, even when the movement didn't.",
+      "sources": [
+        {
+          "contentId": "mdc-5bca2753c0d5bc8d725f",
+          "assetIndex": 0,
+          "sourceReel": 47
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s8",
+      "passageIndex": 1,
+      "text": "After years of supporting experiences behind the scenes, I was giving myself permission to enter the scene.",
+      "sources": [
+        {
+          "contentId": "mdc-5bca2753c0d5bc8d725f",
+          "assetIndex": 0,
+          "sourceReel": 47
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    }
+  ]
 }

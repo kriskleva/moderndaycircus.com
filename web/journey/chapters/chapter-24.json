@@ -8,23 +8,6 @@
     "The archive doesn't end with everything resolved. It ends with me still making things. Still entering rooms. Still curious about what comes next. Looking back, I can see the daily practices becoming a life: care for my body, room for expression, work made with my hands, and people willing to share the experience.",
     "Modern Day Circus is the record of that becoming. I am learning how to live a life I can recognize as my own—and how to let myself be seen while I live it."
   ],
-  "media": [
-    {
-      "contentId": "mdc-65b4a0b7cdb3a70531dc",
-      "assetIndex": 0,
-      "sourceReel": 187
-    },
-    {
-      "contentId": "mdc-52b3d8743c1bb5f304dc",
-      "assetIndex": 0,
-      "sourceReel": 196
-    },
-    {
-      "contentId": "mdc-96b4d28705a48fd41460",
-      "assetIndex": 0,
-      "sourceReel": 199
-    }
-  ],
   "reflections": [
     {
       "kind": "Notice",
@@ -39,5 +22,157 @@
       "prompt": "Leave a note for yourself to open a month from now. Include one question you hope to keep exploring."
     }
   ],
-  "reflectionLabel": "An invitation to reflect"
+  "reflectionLabel": "An invitation to reflect",
+  "scenes": [
+    {
+      "id": "p1-s1",
+      "passageIndex": 0,
+      "text": "Three crows gave the closing stretch a language: past, present, becoming. A garment still waiting to emerge.",
+      "sources": [
+        {
+          "contentId": "mdc-65b4a0b7cdb3a70531dc",
+          "assetIndex": 0,
+          "sourceReel": 187
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p1-s3",
+      "passageIndex": 0,
+      "text": "Costume season beginning.",
+      "sources": [
+        {
+          "contentId": "mdc-52b3d8743c1bb5f304dc",
+          "assetIndex": 0,
+          "sourceReel": 196
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p1-s4",
+      "passageIndex": 0,
+      "text": "A kilt, a joke, another opportunity to play.",
+      "sources": [
+        {
+          "contentId": "mdc-96b4d28705a48fd41460",
+          "assetIndex": 0,
+          "sourceReel": 199
+        }
+      ],
+      "attribution": "Adapted from the original caption"
+    },
+    {
+      "id": "p2-s1",
+      "passageIndex": 1,
+      "text": "The archive doesn't end with everything resolved.",
+      "sources": [
+        {
+          "contentId": "mdc-65b4a0b7cdb3a70531dc",
+          "assetIndex": 0,
+          "sourceReel": 187
+        },
+        {
+          "contentId": "mdc-f6a4306d3ebd724e69d7",
+          "assetIndex": 0,
+          "sourceReel": 99
+        }
+      ],
+      "attribution": "Editorial synthesis of these captions"
+    },
+    {
+      "id": "p2-s2",
+      "passageIndex": 1,
+      "text": "It ends with me still making things.",
+      "sources": [
+        {
+          "contentId": "mdc-631d2bb12234c60a4269",
+          "assetIndex": 0,
+          "sourceReel": 89
+        }
+      ],
+      "attribution": "Editorial synthesis of these captions"
+    },
+    {
+      "id": "p2-s3",
+      "passageIndex": 1,
+      "text": "Still entering rooms.",
+      "sources": [
+        {
+          "contentId": "mdc-6e98fb00d2cf0ea1566a",
+          "assetIndex": 0,
+          "sourceReel": 121
+        }
+      ],
+      "attribution": "Editorial synthesis of these captions"
+    },
+    {
+      "id": "p2-s4",
+      "passageIndex": 1,
+      "text": "Still curious about what comes next.",
+      "sources": [
+        {
+          "contentId": "mdc-65b4a0b7cdb3a70531dc",
+          "assetIndex": 0,
+          "sourceReel": 187
+        }
+      ],
+      "attribution": "Editorial synthesis of these captions"
+    },
+    {
+      "id": "p2-s5",
+      "passageIndex": 1,
+      "text": "Looking back, I can see the daily practices becoming a life: care for my body, room for expression, work made with my hands, and people willing to share the experience.",
+      "sources": [
+        {
+          "contentId": "mdc-5a888a6c5b180dd97676",
+          "assetIndex": 0,
+          "sourceReel": 170
+        },
+        {
+          "contentId": "mdc-631d2bb12234c60a4269",
+          "assetIndex": 0,
+          "sourceReel": 89
+        },
+        {
+          "contentId": "mdc-77ca70cfad0ad5976aaa",
+          "assetIndex": 0,
+          "sourceReel": 125
+        }
+      ],
+      "attribution": "Editorial synthesis of these captions"
+    },
+    {
+      "id": "p3-s1",
+      "passageIndex": 2,
+      "text": "Modern Day Circus is the record of that becoming.",
+      "sources": [
+        {
+          "contentId": "mdc-f6a4306d3ebd724e69d7",
+          "assetIndex": 0,
+          "sourceReel": 99
+        }
+      ],
+      "attribution": "Editorial synthesis of these captions"
+    },
+    {
+      "id": "p3-s2",
+      "passageIndex": 2,
+      "text": "I am learning how to live a life I can recognize as my own—and how to let myself be seen while I live it.",
+      "sources": [
+        {
+          "contentId": "mdc-f6a4306d3ebd724e69d7",
+          "assetIndex": 0,
+          "sourceReel": 99
+        },
+        {
+          "contentId": "mdc-f4c0474b6e4dd739593b",
+          "assetIndex": 0,
+          "sourceReel": 137
+        }
+      ],
+      "attribution": "Editorial synthesis of these captions"
+    }
+  ]
 }
