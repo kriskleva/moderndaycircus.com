@@ -10,13 +10,15 @@
     const params = new URLSearchParams(location.search);
     const format = formats.includes(params.get('type')) ? params.get('type') : 'all';
     let path = '/';
-    if (params.has('asset')) path = '/gallery/content';
+    if(location.pathname==='/journey/'||location.pathname==='/journey/index.html'){const chapter=params.get('chapter');path='/journey'+(/^chapter-(0[1-9]|1[0-9]|2[0-4])$/.test(chapter||'')?'/'+chapter:'');}
+    if(path.startsWith('/journey')){}
+    else if (params.has('asset')) path = '/gallery/content';
     else if (params.get('view') === 'bundles') path = params.has('bundle') ? '/bundles/detail' : '/bundles';
     else if (['results','visual'].includes(params.get('view'))) path = params.get('view') === 'visual' ? '/gallery/visual-search' : '/gallery/search';
     else if (params.get('view') === 'ring') path = '/rings/' + (['body','identity','maker'].includes(params.get('ring')) ? params.get('ring') : 'all');
     else if (['collections','collection','insights','favorites'].includes(params.get('view'))) path = '/' + params.get('view');
     else if (format !== 'all') path = '/gallery/' + format;
-    return {page_location: 'https://moderndaycircus.com' + path, page_title: 'Modern Day Circus | ' + ({'/':'Home','/gallery/content':'Content','/gallery/search':'Search','/bundles':'Bundles','/bundles/detail':'Bundle'}[path] || format)};
+    return {page_location: 'https://moderndaycircus.com' + path, page_title: 'Modern Day Circus | ' + ({'/':'Home','/gallery/content':'Content','/gallery/search':'Search','/bundles':'Bundles','/bundles/detail':'Bundle'}[path] || (path.startsWith('/journey')?'Journey'+(path.split('/')[2]?' | '+path.split('/')[2]:''):format))};
   }
   function referrer() {
     try { return document.referrer ? new URL(document.referrer).origin + '/' : ''; }
@@ -38,14 +40,15 @@
     document.head.append(script);
   }
   window.mdcAnalyticsPage = () => {
-    if (!production || lastRoute === location.href) return;
-    lastRoute = location.href;
+    if (!production || lastRoute === page().page_location) return;
+    lastRoute = page().page_location;
     const current = page();
     window.gtag('set', {...current, page_referrer: previousPage || referrer()});
     window.gtag('event', 'page_view', {...current, page_referrer: previousPage || referrer()});
     previousPage = current.page_location;
   };
   const originalAPI = window.mdcHostedAPI;
+  if(!originalAPI)return;
   window.mdcHostedAPI = async (path, body) => {
     const result = await originalAPI(path, body);
     if (!production) return result;
