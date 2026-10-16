@@ -4,6 +4,10 @@ The journey at `/journey/` uses 112 globally unique Lightroom backgrounds: 34 st
 
 The reader fills the viewport with source media, preserving the full image/video frame over a blurred backdrop made from the same asset. Text appears over the lower edge. Source captions, chapter navigation and the 72 reflection exercises open in optional sheets. Active-scene videos play muted, pause offscreen and while sheets are open, and respect reduced-motion preferences. Play/pause, sound and text visibility are controllable.
 
+## Homepage and seasonal theme
+
+The homepage and `/journey/` share the visual landing in `web/journey/seasons.js` and `seasons.css`. All 24 chapters remain in their original order. Fire Horse imagery, seasonal groups and symbolic moon markers provide an editorial theme; they do not reset the chronology or claim computed lunar phases. Original period metadata remains in the editable files for provenance, while navigation uses seasons. `index.json` defines the seven calendar groups and chapter cover assets. The library, rings and other site destinations remain available in the expandable “The rest of the circus” section.
+
 ## Editable chapters and attribution
 
 Chapter files live in `web/journey/chapters/`. `index.json` controls chapter order. Keep chapter and scene IDs stable so saved progress remains meaningful.

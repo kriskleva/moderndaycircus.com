@@ -8,145 +8,327 @@
       "id": "chapter-01",
       "title": "THE FIRST SCENE WASN'T A BREAKTHROUGH",
       "period": "November–December 2025",
-      "coverId": "mdc-9f9ead5df7f67556f771"
+      "coverId": "mdc-5dd262d2871f689656f9",
+      "season": "Late autumn",
+      "phase": "Gathering dark",
+      "moon": "◔",
+      "coverIndex": 0
     },
     {
       "id": "chapter-02",
       "title": "THE PERSON I WAS UNDERESTIMATING",
       "period": "December 9–10",
-      "coverId": "mdc-29b4c3d1bacc0de87385"
+      "coverId": "mdc-fe8a60a65912e3ed6d44",
+      "season": "Late autumn",
+      "phase": "Gathering dark",
+      "moon": "◔",
+      "coverIndex": 0
     },
     {
       "id": "chapter-03",
       "title": "A CROOKED SMILE AT CHRISTMAS",
       "period": "December 12",
-      "coverId": "mdc-615dbdb03a083bdc4c53"
+      "coverId": "mdc-615dbdb03a083bdc4c53",
+      "season": "Late autumn",
+      "phase": "Gathering dark",
+      "moon": "◔",
+      "coverIndex": 0
     },
     {
       "id": "chapter-04",
       "title": "MAKING AN APPOINTMENT WITH MYSELF",
       "period": "December 17–22",
-      "coverId": "mdc-707ed31678260230fed3"
+      "coverId": "mdc-d1c42e7e53da5b1de045",
+      "season": "Winter",
+      "phase": "The inward turn",
+      "moon": "◒",
+      "coverIndex": 0
     },
     {
       "id": "chapter-05",
       "title": "FAILURE, REPAIR, NEXT VERSION",
       "period": "December 23",
-      "coverId": "mdc-2cc81901e4dcd6d7d507"
+      "coverId": "mdc-2cc81901e4dcd6d7d507",
+      "season": "Winter",
+      "phase": "The inward turn",
+      "moon": "◒",
+      "coverIndex": 0
     },
     {
       "id": "chapter-06",
       "title": "THIS CHRISTMAS, I AM THE GIFT",
       "period": "December 24–25",
-      "coverId": "mdc-c6ff40972a4566ea0c6b"
+      "coverId": "mdc-912d7b3ad23b80ec9ad3",
+      "season": "Winter",
+      "phase": "The inward turn",
+      "moon": "◒",
+      "coverIndex": 0
     },
     {
       "id": "chapter-07",
       "title": "SIX FOOT FOUR, UPSIDE DOWN",
       "period": "December 29–January",
-      "coverId": "mdc-83b6e47520b88e53fa86"
+      "coverId": "mdc-6b86170653c9c9b5c677",
+      "season": "Winter",
+      "phase": "The inward turn",
+      "moon": "◒",
+      "coverIndex": 0
     },
     {
       "id": "chapter-08",
       "title": "THE PROMISE CAN CHANGE SHAPE",
       "period": "January",
-      "coverId": "mdc-5e5c617fded65847302e"
+      "coverId": "mdc-de4361405a782661b171",
+      "season": "Winter",
+      "phase": "The inward turn",
+      "moon": "◒",
+      "coverIndex": 0
     },
     {
       "id": "chapter-09",
       "title": "I CAME FOR TECH. I STAYED FOR PEOPLE.",
       "period": "January 4–5",
-      "coverId": "mdc-7a8039f57c2a2185db8e"
+      "coverId": "mdc-4c5767d554cd946b1dac",
+      "season": "Winter into spring",
+      "phase": "Kindling",
+      "moon": "◑",
+      "coverIndex": 0
     },
     {
       "id": "chapter-10",
       "title": "FROM THE BACK END TO THE RUNWAY",
       "period": "January 22",
-      "coverId": "mdc-5bca2753c0d5bc8d725f"
+      "coverId": "mdc-5bca2753c0d5bc8d725f",
+      "season": "Winter into spring",
+      "phase": "Kindling",
+      "moon": "◑",
+      "coverIndex": 0
     },
     {
       "id": "chapter-11",
       "title": "BUILDING A HOUSE AT SQUARE ONE",
       "period": "February–March",
-      "coverId": "mdc-19254720826adeab4ddf"
+      "coverId": "mdc-603d45a0da0688a36a6f",
+      "season": "Winter into spring",
+      "phase": "Kindling",
+      "moon": "◑",
+      "coverIndex": 0
     },
     {
       "id": "chapter-12",
       "title": "GIVING THE CIRCUS AN ADDRESS",
       "period": "March 13",
-      "coverId": "mdc-eaf36fd37582324ffad3"
+      "coverId": "mdc-55a0b789deb4c6f2332b",
+      "season": "Winter into spring",
+      "phase": "Kindling",
+      "moon": "◑",
+      "coverIndex": 0
     },
     {
       "id": "chapter-13",
       "title": "THE SPRING RESET",
       "period": "March–April",
-      "coverId": "mdc-a36ab15bb3f7daac24e7"
+      "coverId": "mdc-22fe09f1c65b5aad7a59",
+      "season": "Spring",
+      "phase": "Opening",
+      "moon": "◕",
+      "coverIndex": 0
     },
     {
       "id": "chapter-14",
       "title": "I AM THE MUSIC VIDEO",
       "period": "May 26",
-      "coverId": "mdc-2a89a86d1ce68eb0d3d6"
+      "coverId": "mdc-dbe4ed79d4fd3fb7fcb1",
+      "season": "Spring",
+      "phase": "Opening",
+      "moon": "◕",
+      "coverIndex": 0
     },
     {
       "id": "chapter-15",
       "title": "CONFIDENCE HAS AN ARCHITECTURE",
       "period": "May 31–June 12",
-      "coverId": "mdc-1044c30284484999f2d2"
+      "coverId": "mdc-63d2fd5d69256118def1",
+      "season": "Spring",
+      "phase": "Opening",
+      "moon": "◕",
+      "coverIndex": 0
     },
     {
       "id": "chapter-16",
       "title": "GOLD SCISSORS AND THE QUIET WORK",
       "period": "June 16–30",
-      "coverId": "mdc-cc4944867b0b5e07f52f"
+      "coverId": "mdc-ef34178efc2230a020ea",
+      "season": "Summer",
+      "phase": "Long light",
+      "moon": "●",
+      "coverIndex": 0
     },
     {
       "id": "chapter-17",
       "title": "ALTER THE SHIRT. ENTER THE RACE.",
       "period": "July 12",
-      "coverId": "mdc-8faa1abdeea4dab5a253"
+      "coverId": "mdc-d711043c1a6b5019a760",
+      "season": "Summer",
+      "phase": "Long light",
+      "moon": "●",
+      "coverIndex": 0
     },
     {
       "id": "chapter-18",
       "title": "CURIOSITY WITHOUT ABANDONING MYSELF",
       "period": "July 18",
-      "coverId": "mdc-50cea228a592b26f9ba9"
+      "coverId": "mdc-f5b73b7902a5e3f78a95",
+      "season": "Summer",
+      "phase": "Long light",
+      "moon": "●",
+      "coverIndex": 0
     },
     {
       "id": "chapter-19",
       "title": "THE CHARACTER STUDY",
       "period": "July 21–August 6",
-      "coverId": "mdc-f6a4306d3ebd724e69d7"
+      "coverId": "mdc-177f9ef4afd6ff16dbae",
+      "season": "Summer",
+      "phase": "Long light",
+      "moon": "●",
+      "coverIndex": 0
     },
     {
       "id": "chapter-20",
       "title": "TRY OVERSHARING YOUR JOY",
       "period": "August 13–16",
-      "coverId": "mdc-69377402b6421f4afbf4"
+      "coverId": "mdc-2d7d203a8b36f7c1c3dc",
+      "season": "Late summer",
+      "phase": "Full expression",
+      "moon": "◐",
+      "coverIndex": 0
     },
     {
       "id": "chapter-21",
       "title": "THE MIRROR AND THE LITTLE BOY",
       "period": "August 22–27",
-      "coverId": "mdc-f4c0474b6e4dd739593b"
+      "coverId": "mdc-f4c0474b6e4dd739593b",
+      "season": "Late summer",
+      "phase": "Full expression",
+      "moon": "◐",
+      "coverIndex": 0
     },
     {
       "id": "chapter-22",
       "title": "MUTUAL CHOOSING",
       "period": "Late August–September",
-      "coverId": "mdc-d797a812594f95a831d3"
+      "coverId": "mdc-efcd8df0370eaca0a64f",
+      "season": "Late summer",
+      "phase": "Full expression",
+      "moon": "◐",
+      "coverIndex": 0
     },
     {
       "id": "chapter-23",
       "title": "KNOWING THE WAY BACK",
       "period": "September 6–22",
-      "coverId": "mdc-5a888a6c5b180dd97676"
+      "coverId": "mdc-5a888a6c5b180dd97676",
+      "season": "Autumn",
+      "phase": "Coming home",
+      "moon": "◓",
+      "coverIndex": 0
     },
     {
       "id": "chapter-24",
       "title": "PAST. PRESENT. BECOMING.",
       "period": "Late September–October",
-      "coverId": "mdc-65b4a0b7cdb3a70531dc"
+      "coverId": "mdc-f6954aae84604a8a6a01",
+      "season": "Autumn",
+      "phase": "Coming home",
+      "moon": "◓",
+      "coverIndex": 0
     }
-  ]
+  ],
+  "calendar": {
+    "theme": "Year of the Fire Horse",
+    "note": "Fire Horse is the creative theme of the journey. The seasons and moon symbols follow the story’s emotional arc, rather than exact lunar phases.",
+    "groups": [
+      {
+        "id": "gathering",
+        "title": "Gathering dark",
+        "season": "Late autumn",
+        "moon": "◔",
+        "chapterIds": [
+          "chapter-01",
+          "chapter-02",
+          "chapter-03"
+        ]
+      },
+      {
+        "id": "inward",
+        "title": "The inward turn",
+        "season": "Winter",
+        "moon": "◒",
+        "chapterIds": [
+          "chapter-04",
+          "chapter-05",
+          "chapter-06",
+          "chapter-07",
+          "chapter-08"
+        ]
+      },
+      {
+        "id": "kindling",
+        "title": "Kindling",
+        "season": "Winter into spring",
+        "moon": "◑",
+        "chapterIds": [
+          "chapter-09",
+          "chapter-10",
+          "chapter-11",
+          "chapter-12"
+        ]
+      },
+      {
+        "id": "opening",
+        "title": "Opening",
+        "season": "Spring",
+        "moon": "◕",
+        "chapterIds": [
+          "chapter-13",
+          "chapter-14",
+          "chapter-15"
+        ]
+      },
+      {
+        "id": "long-light",
+        "title": "Long light",
+        "season": "Summer",
+        "moon": "●",
+        "chapterIds": [
+          "chapter-16",
+          "chapter-17",
+          "chapter-18",
+          "chapter-19"
+        ]
+      },
+      {
+        "id": "expression",
+        "title": "Full expression",
+        "season": "Late summer",
+        "moon": "◐",
+        "chapterIds": [
+          "chapter-20",
+          "chapter-21",
+          "chapter-22"
+        ]
+      },
+      {
+        "id": "return",
+        "title": "Coming home",
+        "season": "Autumn",
+        "moon": "◓",
+        "chapterIds": [
+          "chapter-23",
+          "chapter-24"
+        ]
+      }
+    ]
+  }
 }

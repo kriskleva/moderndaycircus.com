@@ -60,9 +60,11 @@ function introduction(type,theme){
 function render(){
  window.mdcAnalyticsPage?.();const p=new URLSearchParams(location.search),id=p.get('asset'),view=p.get('view'),type=p.get('type')||(view==='reels'?'reel':view==='stories'?'story':'all'),q=p.get('q')||'',theme=p.get('theme')||'',orientation=p.get('orientation')||'all';
 
- const mobile=matchMedia('(max-width:800px)').matches,immersive=mobile&&(!p.size||['feed','reels','stories'].includes(view));
- document.body.classList.toggle('mobile-feed',immersive);mobileNavigation(mobile,view);
+ const becomingHome=window.MDCBecoming.isHome(p),mobile=matchMedia('(max-width:800px)').matches,immersive=mobile&&!becomingHome&&['feed','reels','stories'].includes(view);
+ document.body.classList.toggle('mobile-feed',immersive);document.body.classList.toggle('becoming-page',becomingHome);mobileNavigation(mobile&&!becomingHome,view);
+ window.MDCBecoming.stop();
  window.MDCMobile?.stop();
+ if(becomingHome){document.body.classList.remove('manifesto-page');window.MDCBecoming.mount({main:$('#main'),library});return}
  if(immersive){document.body.classList.remove('manifesto-page');window.MDCMobile.mount({library,mode:view==='reels'?'reels':view==='stories'?'stories':'feed',title,route,toast,bundle:id=>openDrawer([id]),menu:mobileMenu,ringFor:id=>Object.entries(window.MDCRingSelections||{}).find(([,items])=>items.some(s=>s.content_id===id))?.[0],favorite:async id=>{const r=library.find(r=>r.id===id);const d=await api('/api/item',{id,revision,patch:{favorite:!r.edit.favorite}});revision=d.revision;r.edit=d.edit;return r.edit.favorite}});return}
  document.body.classList.toggle('manifesto-page',!p.size||view==='manifesto');
  if(!p.size||view==='manifesto'){manifestoView();return}if(view==='ring'){ringView(p.get('ring'));return}
