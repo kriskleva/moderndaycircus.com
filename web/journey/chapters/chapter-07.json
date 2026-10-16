@@ -1,0 +1,42 @@
+{
+  "id": "chapter-07",
+  "number": 7,
+  "title": "SIX FOOT FOUR, UPSIDE DOWN",
+  "period": "December 29–January",
+  "passages": [
+    "At forty-eight, six foot four, and around 240 pounds, I decided to learn a handstand. Then I let people watch the awkward part.",
+    "There were headstand failures, kick-ups, sore muscles, drills, and days when the progress felt boring. Ten attempts could mean ten small failures and ten reasons to return. The challenge gave the bigger story something concrete: a body learning to trust a new position, and a man learning to keep a promise to himself."
+  ],
+  "media": [
+    {
+      "contentId": "mdc-83b6e47520b88e53fa86",
+      "assetIndex": 0,
+      "sourceReel": 20
+    },
+    {
+      "contentId": "mdc-9f2c4d4d05435c0d4a94",
+      "assetIndex": 0,
+      "sourceReel": 34
+    },
+    {
+      "contentId": "mdc-33134f9bd36d92c866ea",
+      "assetIndex": 0,
+      "note": "Another moment from this part of the archive."
+    }
+  ],
+  "reflections": [
+    {
+      "kind": "Notice",
+      "prompt": "What promise would you like to practice keeping?"
+    },
+    {
+      "kind": "Write",
+      "prompt": "Choose a skill you want to learn. What would a small, repeatable practice look like for you?"
+    },
+    {
+      "kind": "Try",
+      "prompt": "Give your chosen skill five minutes. Write down what you tried so you have a starting point next time."
+    }
+  ],
+  "reflectionLabel": "An invitation to reflect"
+}

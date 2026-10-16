@@ -1,0 +1,42 @@
+{
+  "id": "chapter-13",
+  "number": 13,
+  "title": "THE SPRING RESET",
+  "period": "March–April",
+  "passages": [
+    "After winter, I found myself going to the waterfall near home. Water moving past my feet. Cold rain against my back. A way to begin again without needing to explain everything first.",
+    "Friends and fire belonged to this season, too. New toys, new movement, the familiar awkwardness of learning. I kept discovering that curiosity could lead me out of my own head. Sometimes the next useful thing was to go outside, move, and let an experience become more interesting than the thoughts circling around it."
+  ],
+  "media": [
+    {
+      "contentId": "mdc-a36ab15bb3f7daac24e7",
+      "assetIndex": 0,
+      "sourceReel": 65
+    },
+    {
+      "contentId": "mdc-8d5a32ae838380f84058",
+      "assetIndex": 0,
+      "sourceReel": 67
+    },
+    {
+      "contentId": "mdc-ebaae551083840728baa",
+      "assetIndex": 0,
+      "sourceReel": 70
+    }
+  ],
+  "reflections": [
+    {
+      "kind": "Notice",
+      "prompt": "What catches your attention when you step outside?"
+    },
+    {
+      "kind": "Write",
+      "prompt": "Recall a place outdoors where you like spending time. What do you notice there that you miss when you are busy?"
+    },
+    {
+      "kind": "Try",
+      "prompt": "If it is accessible to you, spend five minutes in a place you enjoy. Notice one sound, one texture, and one detail."
+    }
+  ],
+  "reflectionLabel": "An invitation to reflect"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "chapter-16",
+  "number": 16,
+  "title": "GOLD SCISSORS AND THE QUIET WORK",
+  "period": "June 16–30",
+  "passages": [
+    "A trip into the wilderness. Long hours in my own head. A new pair of gold scissors. A sewing machine. The work was changing shape again.",
+    "Sewing gave me another place to practice patience and solve problems with my hands. I made pieces for myself and the squad, with mentors willing to help me learn. Fabric offered a tangible answer to an emotional question: what do I want to make of this time, this energy, this version of myself?"
+  ],
+  "media": [
+    {
+      "contentId": "mdc-cc4944867b0b5e07f52f",
+      "assetIndex": 0,
+      "sourceReel": 83
+    },
+    {
+      "contentId": "mdc-631d2bb12234c60a4269",
+      "assetIndex": 0,
+      "sourceReel": 89
+    }
+  ],
+  "reflections": [
+    {
+      "kind": "Notice",
+      "prompt": "What would you like to make of this season?"
+    },
+    {
+      "kind": "Write",
+      "prompt": "What would you like to make with your hands? Write down the smallest first step and one person you could ask for guidance."
+    },
+    {
+      "kind": "Try",
+      "prompt": "Gather one material or tool for your project. Try a small sample before tackling the whole thing."
+    }
+  ],
+  "reflectionLabel": "An invitation to reflect"
+}

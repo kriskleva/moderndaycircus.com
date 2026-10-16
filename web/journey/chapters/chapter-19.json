@@ -1,0 +1,42 @@
+{
+  "id": "chapter-19",
+  "number": 19,
+  "title": "THE CHARACTER STUDY",
+  "period": "July 21–August 6",
+  "passages": [
+    "By July, I had a name for what I was doing: a character study of my own life. The wins, the failures, the mentors, the adventures, the relationships, the style, the creative experiments.",
+    "Watching myself was helping me understand myself. Technology could support that attention: cameras, ideas captured before they disappeared, tools that made room to create. Video editing could be a place to move through emotion. The work was becoming a record I could return to and recognize."
+  ],
+  "media": [
+    {
+      "contentId": "mdc-f6a4306d3ebd724e69d7",
+      "assetIndex": 0,
+      "sourceReel": 99
+    },
+    {
+      "contentId": "mdc-1348c88de0d657e23d6a",
+      "assetIndex": 0,
+      "sourceReel": 109
+    },
+    {
+      "contentId": "mdc-ed02729c25d883600c2d",
+      "assetIndex": 0,
+      "sourceReel": 114
+    }
+  ],
+  "reflections": [
+    {
+      "kind": "Notice",
+      "prompt": "What is your life showing you about yourself?"
+    },
+    {
+      "kind": "Write",
+      "prompt": "Choose one moment you want to remember from this week. What does it show you about the person you are becoming?"
+    },
+    {
+      "kind": "Try",
+      "prompt": "Save the moment in a note, photo, or voice memo. Add one sentence about why it matters to you."
+    }
+  ],
+  "reflectionLabel": "An invitation to reflect"
+}

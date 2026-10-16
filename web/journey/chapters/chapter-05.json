@@ -1,0 +1,32 @@
+{
+  "id": "chapter-05",
+  "number": 5,
+  "title": "FAILURE, REPAIR, NEXT VERSION",
+  "period": "December 23",
+  "passages": [
+    "My technical brain already understood iteration. Build something. Learn where it breaks. Refactor. Try again. I began using the same language for my life.",
+    "Failure could become information. Repair could become an action. I didn't need to pretend every disappointment had been useful or fair. I needed a way to respond that left me able to keep going. I started imagining the next version of myself as someone I could build through practice."
+  ],
+  "media": [
+    {
+      "contentId": "mdc-2cc81901e4dcd6d7d507",
+      "assetIndex": 0,
+      "sourceReel": 12
+    }
+  ],
+  "reflections": [
+    {
+      "kind": "Notice",
+      "prompt": "What is this version teaching you?"
+    },
+    {
+      "kind": "Write",
+      "prompt": "Think of one recent disappointment. What can you learn from it, and what is one repair you can make?"
+    },
+    {
+      "kind": "Try",
+      "prompt": "Choose one repair you can begin in ten minutes. Take the first step and note what happened."
+    }
+  ],
+  "reflectionLabel": "An invitation to reflect"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "chapter-08",
+  "number": 8,
+  "title": "THE PROMISE CAN CHANGE SHAPE",
+  "period": "January",
+  "passages": [
+    "Some days I missed the goal. Some days I needed rest. Household chores and storm cleanup still happened. The ordinary logistics of life kept interrupting the transformation montage.",
+    "I began learning how to adjust without treating every adjustment as defeat. A smaller practice could still count. Guidance from a friend could help. Mobility mattered. Preparation mattered. The handstand was becoming a lesson in how to continue a life, including the days that never looked impressive on camera."
+  ],
+  "media": [
+    {
+      "contentId": "mdc-5e5c617fded65847302e",
+      "assetIndex": 0,
+      "sourceReel": 30
+    },
+    {
+      "contentId": "mdc-f81b071cd00de05774bd",
+      "assetIndex": 0,
+      "sourceReel": 48
+    }
+  ],
+  "reflections": [
+    {
+      "kind": "Notice",
+      "prompt": "What would continuing look like on a hard day?"
+    },
+    {
+      "kind": "Write",
+      "prompt": "Write a smaller version of a promise you have made to yourself. What would still count on a difficult day?"
+    },
+    {
+      "kind": "Try",
+      "prompt": "Try the smaller promise once. Notice whether it leaves you more willing to return."
+    }
+  ],
+  "reflectionLabel": "An invitation to reflect"
+}

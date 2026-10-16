@@ -1,0 +1,32 @@
+{
+  "id": "chapter-18",
+  "number": 18,
+  "title": "CURIOSITY WITHOUT ABANDONING MYSELF",
+  "period": "July 18",
+  "passages": [
+    "My relationship reflections were becoming more specific. I wanted to understand what closeness meant to another person. What helped them feel safe. What made a difficult conversation possible.",
+    "I also wanted to notice whether that curiosity came back toward me. Could I be myself here? Were we choosing each other? Understanding someone else's experience didn't have to require losing track of my own. I was trying to make room for love and self-respect in the same conversation."
+  ],
+  "media": [
+    {
+      "contentId": "mdc-50cea228a592b26f9ba9",
+      "assetIndex": 0,
+      "sourceReel": 95
+    }
+  ],
+  "reflections": [
+    {
+      "kind": "Notice",
+      "prompt": "Is your curiosity being met with curiosity?"
+    },
+    {
+      "kind": "Write",
+      "prompt": "Write one question you would like to ask someone close to you. Then write one thing you would like them to be curious about in you."
+    },
+    {
+      "kind": "Try",
+      "prompt": "Choose a calm moment to ask your question, if you want to. Leave room to listen and to express your own needs."
+    }
+  ],
+  "reflectionLabel": "An invitation to reflect"
+}

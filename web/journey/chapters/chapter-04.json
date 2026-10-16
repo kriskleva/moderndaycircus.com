@@ -1,0 +1,37 @@
+{
+  "id": "chapter-04",
+  "number": 4,
+  "title": "MAKING AN APPOINTMENT WITH MYSELF",
+  "period": "December 17–22",
+  "passages": [
+    "The early mornings became a place I could return to. Sound before the noise of the day. Movement before everyone else's demands. Heat, quiet, and a little time to notice how I felt.",
+    "I started describing self-care as something I had to schedule. Responsibilities were always going to fill the available space. If I wanted a life with energy left for creativity and connection, I needed to make room for myself inside it. The ritual began before sunrise."
+  ],
+  "media": [
+    {
+      "contentId": "mdc-707ed31678260230fed3",
+      "assetIndex": 0,
+      "sourceReel": 8
+    },
+    {
+      "contentId": "mdc-d1c42e7e53da5b1de045",
+      "assetIndex": 0,
+      "sourceReel": 10
+    }
+  ],
+  "reflections": [
+    {
+      "kind": "Notice",
+      "prompt": "Where do you disappear from your own schedule?"
+    },
+    {
+      "kind": "Write",
+      "prompt": "Find ten minutes in tomorrow’s day that can belong to you. What would you like to do with them?"
+    },
+    {
+      "kind": "Try",
+      "prompt": "Put those ten minutes on your calendar. Make the appointment small enough to keep."
+    }
+  ],
+  "reflectionLabel": "An invitation to reflect"
+}

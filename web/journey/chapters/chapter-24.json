@@ -1,0 +1,43 @@
+{
+  "id": "chapter-24",
+  "number": 24,
+  "title": "PAST. PRESENT. BECOMING.",
+  "period": "Late September–October",
+  "passages": [
+    "Three crows gave the closing stretch a language: past, present, becoming. A garment still waiting to emerge. Costume season beginning. A kilt, a joke, another opportunity to play.",
+    "The archive doesn't end with everything resolved. It ends with me still making things. Still entering rooms. Still curious about what comes next. Looking back, I can see the daily practices becoming a life: care for my body, room for expression, work made with my hands, and people willing to share the experience.",
+    "Modern Day Circus is the record of that becoming. I am learning how to live a life I can recognize as my own—and how to let myself be seen while I live it."
+  ],
+  "media": [
+    {
+      "contentId": "mdc-65b4a0b7cdb3a70531dc",
+      "assetIndex": 0,
+      "sourceReel": 187
+    },
+    {
+      "contentId": "mdc-52b3d8743c1bb5f304dc",
+      "assetIndex": 0,
+      "sourceReel": 196
+    },
+    {
+      "contentId": "mdc-96b4d28705a48fd41460",
+      "assetIndex": 0,
+      "sourceReel": 199
+    }
+  ],
+  "reflections": [
+    {
+      "kind": "Notice",
+      "prompt": "What are you still curious to become?"
+    },
+    {
+      "kind": "Write",
+      "prompt": "Write one thing you are carrying from the past, one thing you appreciate in the present, and one thing you are curious to become."
+    },
+    {
+      "kind": "Try",
+      "prompt": "Leave a note for yourself to open a month from now. Include one question you hope to keep exploring."
+    }
+  ],
+  "reflectionLabel": "An invitation to reflect"
+}

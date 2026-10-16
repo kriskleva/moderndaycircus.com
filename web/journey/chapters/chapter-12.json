@@ -1,0 +1,32 @@
+{
+  "id": "chapter-12",
+  "number": 12,
+  "title": "GIVING THE CIRCUS AN ADDRESS",
+  "period": "March 13",
+  "passages": [
+    "There was a quieter stretch online because I was building. I described a Shopify project that could bring wellness, movement, fashion, creative technology, and my own experiments into one place.",
+    "Modern Day Circus was taking shape as a place where these interests could live together. The programmer, the maker, the person training before dawn, the person learning to walk a runway: I was looking for a way to let all of them belong in the same story."
+  ],
+  "media": [
+    {
+      "contentId": "mdc-eaf36fd37582324ffad3",
+      "assetIndex": 0,
+      "sourceReel": 56
+    }
+  ],
+  "reflections": [
+    {
+      "kind": "Notice",
+      "prompt": "Which parts of your life want to meet each other?"
+    },
+    {
+      "kind": "Write",
+      "prompt": "List three interests you usually keep separate. Sketch a place or project where they could meet."
+    },
+    {
+      "kind": "Try",
+      "prompt": "Give your three interests a shared page: write a name, sketch a corner, or make a small outline."
+    }
+  ],
+  "reflectionLabel": "An invitation to reflect"
+}

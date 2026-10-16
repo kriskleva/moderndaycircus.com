@@ -1,0 +1,37 @@
+{
+  "id": "chapter-09",
+  "number": 9,
+  "title": "I CAME FOR TECH. I STAYED FOR PEOPLE.",
+  "period": "January 4–5",
+  "passages": [
+    "Around the new year, I talked about Portland, community, and the work of helping artists gain access to space and opportunity. My career had brought me to Maine. The people had given me reasons to keep building here.",
+    "Equal Measure Arts and The Square belonged in this story because creativity needed more than individual confidence. It needed places to happen. People needed ways to find each other, exchange skills, and make things together. I wanted to help build those connections."
+  ],
+  "media": [
+    {
+      "contentId": "mdc-7a8039f57c2a2185db8e",
+      "assetIndex": 0,
+      "sourceReel": 28
+    },
+    {
+      "contentId": "mdc-4c5767d554cd946b1dac",
+      "assetIndex": 0,
+      "sourceReel": 29
+    }
+  ],
+  "reflections": [
+    {
+      "kind": "Notice",
+      "prompt": "Who makes it easier for you to begin?"
+    },
+    {
+      "kind": "Write",
+      "prompt": "Name a place or person who helps your creativity feel possible. What could you contribute in return?"
+    },
+    {
+      "kind": "Try",
+      "prompt": "Write a short thank-you to someone who makes room for your creativity. Decide whether you want to share it."
+    }
+  ],
+  "reflectionLabel": "An invitation to reflect"
+}

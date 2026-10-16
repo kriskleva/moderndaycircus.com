@@ -1,0 +1,37 @@
+{
+  "id": "chapter-06",
+  "number": 6,
+  "title": "THIS CHRISTMAS, I AM THE GIFT",
+  "period": "December 24–25",
+  "passages": [
+    "There was fire. There was cold water. There was a Christmas experiment in choosing my own presence. I wrapped myself as a reminder that I brought something to the world simply by being here.",
+    "I knew the pleasure of caring for other people, meeting needs, making everyone else smile. This time I wanted to enjoy the imagination I had been carrying around inside me. The silly parts. The vibrant parts. The sexy parts. I wanted some of that generosity to reach me, too."
+  ],
+  "media": [
+    {
+      "contentId": "mdc-c6ff40972a4566ea0c6b",
+      "assetIndex": 0,
+      "sourceReel": 13
+    },
+    {
+      "contentId": "mdc-04dafc1acff969bbcb5a",
+      "assetIndex": 0,
+      "sourceReel": 16
+    }
+  ],
+  "reflections": [
+    {
+      "kind": "Notice",
+      "prompt": "What do you bring simply by showing up?"
+    },
+    {
+      "kind": "Write",
+      "prompt": "List three things your presence brings to the people around you. Choose one to offer yourself today."
+    },
+    {
+      "kind": "Try",
+      "prompt": "Do one kind thing for yourself today that you usually reserve for someone else."
+    }
+  ],
+  "reflectionLabel": "An invitation to reflect"
+}

@@ -19,3 +19,5 @@ body.mobile-feed{overflow:hidden}
 
 .mobile-menu-links{display:grid;gap:8px}.mobile-menu-links button{text-align:left;padding:12px;border-bottom:1px solid #eee}
 @media(max-width:800px){.mobile-experience.phone{display:flex;flex-direction:column;position:relative;overflow:hidden;background:#fff}.mobile-experience #scroll{min-height:0;flex:1;overflow:auto}.mobile-experience footer{margin:0;background:white;color:#888;padding:20px}.mobile-experience .post-head{position:static}.mobile-experience [hidden]{display:none!important}.mobile-experience #content{margin:0;padding:0;max-width:none}.mobile-experience #immersive{position:absolute;inset:0}.mobile-experience #immersive button{color:inherit}}
+
+.mobile-menu-links>a{display:block;text-align:left;padding:12px;border-bottom:1px solid #eee;color:inherit;text-decoration:none}

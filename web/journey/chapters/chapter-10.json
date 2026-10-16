@@ -1,0 +1,32 @@
+{
+  "id": "chapter-10",
+  "number": 10,
+  "title": "FROM THE BACK END TO THE RUNWAY",
+  "period": "January 22",
+  "passages": [
+    "I had spent years helping fashion and retail work through technology: APIs, platforms, payments, integrations. Then I began studying the experience from inside my own body.",
+    "Posture. Movement. A dip. A walk. Lessons with people who understood the craft and its history. I was learning a new language in public. The curiosity felt familiar, even when the movement didn't. After years of supporting experiences behind the scenes, I was giving myself permission to enter the scene."
+  ],
+  "media": [
+    {
+      "contentId": "mdc-5bca2753c0d5bc8d725f",
+      "assetIndex": 0,
+      "sourceReel": 47
+    }
+  ],
+  "reflections": [
+    {
+      "kind": "Notice",
+      "prompt": "Where would you like to step into the scene?"
+    },
+    {
+      "kind": "Write",
+      "prompt": "Where have you supported others from behind the scenes? Write down one way you would like to participate yourself."
+    },
+    {
+      "kind": "Try",
+      "prompt": "Choose one low-pressure opportunity to take part. Put a first step on your calendar."
+    }
+  ],
+  "reflectionLabel": "An invitation to reflect"
+}
