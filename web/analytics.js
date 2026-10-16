@@ -48,6 +48,7 @@
     window.gtag('set', {...current, page_referrer: previousPage || referrer()});
     window.gtag('event', 'page_view', {...current, page_referrer: previousPage || referrer()});
     previousPage = current.page_location;
+    window.mdcAdsPage?.(current);
   };
   const originalAPI = window.mdcHostedAPI;
   if(!originalAPI)return;

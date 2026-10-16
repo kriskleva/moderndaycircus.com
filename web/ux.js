@@ -1,7 +1,7 @@
 'use strict';
 // Change this release label whenever a user-facing UI change ships.
 (() => {
- const revision='becoming-seasonal-2026-10-16-v1';
+ const revision='becoming-seasonal-2026-10-16-v2-ad-choice';
  const production=['moderndaycircus.com','www.moderndaycircus.com'].includes(location.hostname);
  const actions=new Set(['chapter_open','scene_view','scene_engaged','chapter_end','chapter_complete','chapter_reset','reflection_open','reflection_saved','source_open','chapter_navigation','text_hide','text_show','sound_on','sound_off','video_play','video_pause','media_error','storage_error','chapter_error','journey_error','journey_enter','journey_resume','timeline_open','world_open','library_open','media_impression','media_engaged','browse_depth','active_time','performance','content_open','bookmark_use','load_more','carousel_change','fullscreen_open','search_use']);
  const seen=new Set();
@@ -15,6 +15,7 @@
   if(['lcp','cls','interaction_latency'].includes(values.metric))data.metric=values.metric;
   if(['next','previous','swipe'].includes(values.method))data.method=values.method;
   window.gtag('event','ux_'+action,data);
+  window.mdcAdsEvent?.(action,data);
  };
  window.mdcUXOnce=(action,values={})=>{const key=JSON.stringify([action,values.chapter_id,values.scene_number]);if(seen.has(key))return;seen.add(key);window.mdcUX(action,values);};
  if(production&&window.gtag)window.gtag('set',{ui_version:revision});
